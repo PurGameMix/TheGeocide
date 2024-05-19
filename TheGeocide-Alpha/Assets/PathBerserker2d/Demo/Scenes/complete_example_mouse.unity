@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 1109782956}
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,8 +118,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    maxJobWorkers: 0
-    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -1394,7 +1392,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1462,10 +1459,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.85, y: 1.07}
   - {x: 0.7, y: 1.07}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!61 &232748941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1972,10 +1965,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.7, y: 0}
   - {x: 1.31, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &287013875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,10 +2146,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.69, y: 0}
   - {x: 1.31, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &361576736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,10 +2366,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.91, y: 0}
   - {x: 1.17, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &440047625
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,10 +2953,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.25, y: 0}
   - {x: 1.17, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &595953932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,10 +3167,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.8, y: 0}
   - {x: 1.31, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &634513203
 GameObject:
   m_ObjectHideFlags: 0
@@ -4198,10 +4171,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.25, y: 0}
   - {x: 1.17, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &861124584
 GameObject:
   m_ObjectHideFlags: 0
@@ -4821,10 +4790,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.91, y: 0}
   - {x: 1.17, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &974561665
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,10 +5006,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -2.69, y: 0}
   - {x: 3.28, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &992973976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,7 +5187,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5724,71 +5684,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.25, y: 0}
   - {x: 1.17, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!850595691 &1109782956
-LightingSettings:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Settings.lighting
-  serializedVersion: 2
-  m_GIWorkflowMode: 1
-  m_EnableBakedLightmaps: 0
-  m_EnableRealtimeLightmaps: 0
-  m_RealtimeEnvironmentLighting: 1
-  m_BounceScale: 1
-  m_AlbedoBoost: 1
-  m_IndirectOutputScale: 1
-  m_UsingShadowmask: 1
-  m_BakeBackend: 1
-  m_LightmapMaxSize: 1024
-  m_BakeResolution: 40
-  m_Padding: 2
-  m_TextureCompression: 1
-  m_AO: 0
-  m_AOMaxDistance: 1
-  m_CompAOExponent: 1
-  m_CompAOExponentDirect: 0
-  m_ExtractAO: 0
-  m_MixedBakeMode: 2
-  m_LightmapsBakeMode: 1
-  m_FilterMode: 1
-  m_LightmapParameters: {fileID: 0}
-  m_ExportTrainingData: 0
-  m_TrainingDataDestination: TrainingData
-  m_RealtimeResolution: 2
-  m_ForceWhiteAlbedo: 0
-  m_ForceUpdates: 0
-  m_FinalGather: 0
-  m_FinalGatherRayCount: 256
-  m_FinalGatherFiltering: 1
-  m_PVRCulling: 1
-  m_PVRSampling: 1
-  m_PVRDirectSampleCount: 32
-  m_PVRSampleCount: 512
-  m_PVREnvironmentSampleCount: 256
-  m_PVREnvironmentReferencePointCount: 2048
-  m_LightProbeSampleCountMultiplier: 4
-  m_PVRBounces: 2
-  m_PVRRussianRouletteStartBounce: 2
-  m_PVREnvironmentMIS: 1
-  m_PVRFilteringMode: 1
-  m_PVRDenoiserTypeDirect: 1
-  m_PVRDenoiserTypeIndirect: 1
-  m_PVRDenoiserTypeAO: 1
-  m_PVRFilterTypeDirect: 0
-  m_PVRFilterTypeIndirect: 0
-  m_PVRFilterTypeAO: 0
-  m_PVRFilteringGaussRadiusDirect: 1
-  m_PVRFilteringGaussRadiusIndirect: 5
-  m_PVRFilteringGaussRadiusAO: 2
-  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-  m_PVRFilteringAtrousPositionSigmaIndirect: 2
-  m_PVRFilteringAtrousPositionSigmaAO: 1
 --- !u!1 &1115501458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,7 +5757,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6196,10 +6090,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.38, y: 0}
   - {x: 0.38, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &1170495880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,6 +6261,7 @@ MonoBehaviour:
     height: 0.6003437
   totalLineLength: 4.4669533
   bakeVersion: 2
+  bakeIteration: 0
 --- !u!4 &1208493795
 Transform:
   m_ObjectHideFlags: 0
@@ -6507,10 +6398,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.7, y: 0}
   - {x: 1.31, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &1229188085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6852,10 +6739,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.8, y: 0}
   - {x: 1.31, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &1293035016
 GameObject:
   m_ObjectHideFlags: 0
@@ -7349,7 +7232,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7594,6 +7476,7 @@ MonoBehaviour:
     height: 2.071722
   totalLineLength: 6.0017767
   bakeVersion: 2
+  bakeIteration: 0
 --- !u!114 &1352128907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8516,10 +8399,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.7, y: 0}
   - {x: 1.31, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &1611085045
 GameObject:
   m_ObjectHideFlags: 0
@@ -8568,7 +8447,6 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -41767,53 +41645,6 @@ MonoBehaviour:
     prevSegIndex: 115
     nextSegIndex: -1
     owner: {fileID: 1837017528}
-  - start: {x: -7, y: 7.967}
-    length: 4
-    dirNorm: {x: 1, y: 0}
-    cellClearances:
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    prevSegIndex: -1
-    nextSegIndex: -1
-    owner: {fileID: 1837017528}
   - start: {x: 4, y: -8.986}
     length: 2
     dirNorm: {x: 1, y: 0}
@@ -41841,7 +41672,7 @@ MonoBehaviour:
     prevSegIndex: -1
     nextSegIndex: -1
     owner: {fileID: 1837017528}
-  - start: {x: 4, y: -7.0149994}
+  - start: {x: 4, y: -7.0149}
     length: 2
     dirNorm: {x: 1, y: 0}
     cellClearances:
@@ -41868,7 +41699,7 @@ MonoBehaviour:
     prevSegIndex: -1
     nextSegIndex: -1
     owner: {fileID: 1837017528}
-  - start: {x: 4, y: -5.025999}
+  - start: {x: 4, y: -5.0258}
     length: 2
     dirNorm: {x: 1, y: 0}
     cellClearances:
@@ -41892,53 +41723,6 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: -1
-    nextSegIndex: -1
-    owner: {fileID: 1837017528}
-  - start: {x: 0, y: 7.986}
-    length: 4.009
-    dirNorm: {x: 1, y: 0}
-    cellClearances:
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
     prevSegIndex: -1
     nextSegIndex: -1
     owner: {fileID: 1837017528}
@@ -41979,7 +41763,7 @@ MonoBehaviour:
     prevSegIndex: -1
     nextSegIndex: -1
     owner: {fileID: 1837017528}
-  - start: {x: 0.99, y: 5.9850006}
+  - start: {x: 0.99, y: 5.985}
     length: 3.01
     dirNorm: {x: 1, y: 0}
     cellClearances:
@@ -42090,7 +41874,7 @@ MonoBehaviour:
     prevSegIndex: -1
     nextSegIndex: -1
     owner: {fileID: 1837017528}
-  - start: {x: -23.972, y: 8.983}
+  - start: {x: -23.972, y: 8.9828}
     length: 2.9720001
     dirNorm: {x: 1, y: 0}
     cellClearances:
@@ -42127,12 +41911,12 @@ MonoBehaviour:
     prevSegIndex: -1
     nextSegIndex: -1
     owner: {fileID: 1837017528}
-  - start: {x: -33.007, y: 1.9890003}
-    length: 3.999998
+  - start: {x: -33.0069, y: 1.989}
+    length: 3.9999008
     dirNorm: {x: 1, y: 0}
     cellClearances:
-    - 1.0009997
-    - 1.0009997
+    - 1.001
+    - 1.001
     - 1.8
     - 1.8
     - 1.8
@@ -42174,8 +41958,8 @@ MonoBehaviour:
     prevSegIndex: -1
     nextSegIndex: -1
     owner: {fileID: 1837017528}
-  - start: {x: -31.980001, y: -0.020000458}
-    length: 5.970001
+  - start: {x: -31.98, y: -0.02}
+    length: 5.9699993
     dirNorm: {x: 1, y: 0}
     cellClearances:
     - 1.8
@@ -42265,8 +42049,8 @@ MonoBehaviour:
     - 0.9899998
     - 0.9899998
     - 0.9899998
-    prevSegIndex: 14
-    nextSegIndex: 16
+    prevSegIndex: 12
+    nextSegIndex: 14
     owner: {fileID: 1837017528}
   - start: {x: -9, y: -9}
     length: 2
@@ -42292,8 +42076,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 15
-    nextSegIndex: 13
+    prevSegIndex: 13
+    nextSegIndex: 11
     owner: {fileID: 1837017528}
   - start: {x: -11, y: -9}
     length: 2
@@ -42319,8 +42103,8 @@ MonoBehaviour:
     - 0.9899998
     - 0.9899998
     - 0.9899998
-    prevSegIndex: 16
-    nextSegIndex: 14
+    prevSegIndex: 14
+    nextSegIndex: 12
     owner: {fileID: 1837017528}
   - start: {x: -11, y: -11}
     length: 2
@@ -42346,8 +42130,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 13
-    nextSegIndex: 15
+    prevSegIndex: 11
+    nextSegIndex: 13
     owner: {fileID: 1837017528}
   - start: {x: 5, y: 9}
     length: 2
@@ -42363,18 +42147,18 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    - 1.0039997
-    prevSegIndex: 18
-    nextSegIndex: 238
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    prevSegIndex: 16
+    nextSegIndex: 48
     owner: {fileID: 1837017528}
   - start: {x: 5, y: 10}
     length: 1
@@ -42390,8 +42174,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 19
-    nextSegIndex: 17
+    prevSegIndex: 17
+    nextSegIndex: 15
     owner: {fileID: 1837017528}
   - start: {x: 8, y: 10}
     length: 3
@@ -42427,8 +42211,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 20
-    nextSegIndex: 18
+    prevSegIndex: 18
+    nextSegIndex: 16
     owner: {fileID: 1837017528}
   - start: {x: 8, y: 9}
     length: 1
@@ -42444,8 +42228,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 21
-    nextSegIndex: 19
+    prevSegIndex: 19
+    nextSegIndex: 17
     owner: {fileID: 1837017528}
   - start: {x: 9, y: 9}
     length: 1
@@ -42461,8 +42245,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 22
-    nextSegIndex: 20
+    prevSegIndex: 20
+    nextSegIndex: 18
     owner: {fileID: 1837017528}
   - start: {x: 9, y: 8}
     length: 1
@@ -42478,8 +42262,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 23
-    nextSegIndex: 21
+    prevSegIndex: 21
+    nextSegIndex: 19
     owner: {fileID: 1837017528}
   - start: {x: 11, y: 8}
     length: 2
@@ -42505,8 +42289,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 24
-    nextSegIndex: 22
+    prevSegIndex: 22
+    nextSegIndex: 20
     owner: {fileID: 1837017528}
   - start: {x: 11, y: 9}
     length: 1
@@ -42522,8 +42306,8 @@ MonoBehaviour:
     - 0.9899998
     - 0.9899998
     - 0.9899998
-    prevSegIndex: 25
-    nextSegIndex: 23
+    prevSegIndex: 23
+    nextSegIndex: 21
     owner: {fileID: 1837017528}
   - start: {x: 12, y: 9}
     length: 1
@@ -42539,8 +42323,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 26
-    nextSegIndex: 24
+    prevSegIndex: 24
+    nextSegIndex: 22
     owner: {fileID: 1837017528}
   - start: {x: 12, y: 8}
     length: 1
@@ -42556,8 +42340,8 @@ MonoBehaviour:
     - 0.9899998
     - 0.9899998
     - 0.9899998
-    prevSegIndex: 27
-    nextSegIndex: 25
+    prevSegIndex: 25
+    nextSegIndex: 23
     owner: {fileID: 1837017528}
   - start: {x: 14, y: 8}
     length: 2
@@ -42583,8 +42367,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 28
-    nextSegIndex: 26
+    prevSegIndex: 26
+    nextSegIndex: 24
     owner: {fileID: 1837017528}
   - start: {x: 14, y: 10}
     length: 2
@@ -42610,8 +42394,8 @@ MonoBehaviour:
     - 0.9899998
     - 0.9899998
     - 0.9899998
-    prevSegIndex: 29
-    nextSegIndex: 27
+    prevSegIndex: 27
+    nextSegIndex: 25
     owner: {fileID: 1837017528}
   - start: {x: 13, y: 10}
     length: 1
@@ -42627,8 +42411,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 30
-    nextSegIndex: 28
+    prevSegIndex: 28
+    nextSegIndex: 26
     owner: {fileID: 1837017528}
   - start: {x: 13, y: 11}
     length: 1
@@ -42644,8 +42428,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 31
-    nextSegIndex: 29
+    prevSegIndex: 29
+    nextSegIndex: 27
     owner: {fileID: 1837017528}
   - start: {x: 11, y: 11}
     length: 2
@@ -42671,8 +42455,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 32
-    nextSegIndex: 30
+    prevSegIndex: 30
+    nextSegIndex: 28
     owner: {fileID: 1837017528}
   - start: {x: 11, y: 12}
     length: 1
@@ -42688,8 +42472,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 33
-    nextSegIndex: 31
+    prevSegIndex: 31
+    nextSegIndex: 29
     owner: {fileID: 1837017528}
   - start: {x: -4, y: 12}
     length: 15
@@ -42845,8 +42629,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 34
-    nextSegIndex: 32
+    prevSegIndex: 32
+    nextSegIndex: 30
     owner: {fileID: 1837017528}
   - start: {x: -4, y: 16}
     length: 4
@@ -42892,8 +42676,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 35
-    nextSegIndex: 33
+    prevSegIndex: 33
+    nextSegIndex: 31
     owner: {fileID: 1837017528}
   - start: {x: -8, y: 16}
     length: 4
@@ -42939,8 +42723,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 36
-    nextSegIndex: 34
+    prevSegIndex: 34
+    nextSegIndex: 32
     owner: {fileID: 1837017528}
   - start: {x: -8, y: 18}
     length: 2
@@ -42966,8 +42750,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 37
-    nextSegIndex: 35
+    prevSegIndex: 35
+    nextSegIndex: 33
     owner: {fileID: 1837017528}
   - start: {x: -9, y: 18}
     length: 1
@@ -42983,8 +42767,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 38
-    nextSegIndex: 36
+    prevSegIndex: 36
+    nextSegIndex: 34
     owner: {fileID: 1837017528}
   - start: {x: -9, y: 19}
     length: 1
@@ -43000,8 +42784,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 39
-    nextSegIndex: 37
+    prevSegIndex: 37
+    nextSegIndex: 35
     owner: {fileID: 1837017528}
   - start: {x: -11, y: 19}
     length: 2
@@ -43027,10 +42811,44 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
+    prevSegIndex: 38
+    nextSegIndex: 36
+    owner: {fileID: 1837017528}
+  - start: {x: -11, y: 18}
+    length: 1
+    dirNorm: {x: 0, y: 1}
+    cellClearances:
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    prevSegIndex: 39
+    nextSegIndex: 37
+    owner: {fileID: 1837017528}
+  - start: {x: -12, y: 18}
+    length: 1
+    dirNorm: {x: 1, y: 0}
+    cellClearances:
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
     prevSegIndex: 40
     nextSegIndex: 38
     owner: {fileID: 1837017528}
-  - start: {x: -11, y: 18}
+  - start: {x: -12, y: 17}
     length: 1
     dirNorm: {x: 0, y: 1}
     cellClearances:
@@ -43047,7 +42865,7 @@ MonoBehaviour:
     prevSegIndex: 41
     nextSegIndex: 39
     owner: {fileID: 1837017528}
-  - start: {x: -12, y: 18}
+  - start: {x: -13, y: 17}
     length: 1
     dirNorm: {x: 1, y: 0}
     cellClearances:
@@ -43064,7 +42882,7 @@ MonoBehaviour:
     prevSegIndex: 42
     nextSegIndex: 40
     owner: {fileID: 1837017528}
-  - start: {x: -12, y: 17}
+  - start: {x: -13, y: 16}
     length: 1
     dirNorm: {x: 0, y: 1}
     cellClearances:
@@ -43080,40 +42898,6 @@ MonoBehaviour:
     - 1.8
     prevSegIndex: 43
     nextSegIndex: 41
-    owner: {fileID: 1837017528}
-  - start: {x: -13, y: 17}
-    length: 1
-    dirNorm: {x: 1, y: 0}
-    cellClearances:
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    prevSegIndex: 44
-    nextSegIndex: 42
-    owner: {fileID: 1837017528}
-  - start: {x: -13, y: 16}
-    length: 1
-    dirNorm: {x: 0, y: 1}
-    cellClearances:
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    prevSegIndex: 45
-    nextSegIndex: 43
     owner: {fileID: 1837017528}
   - start: {x: -15, y: 16}
     length: 2
@@ -43139,8 +42923,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 46
-    nextSegIndex: 44
+    prevSegIndex: 44
+    nextSegIndex: 42
     owner: {fileID: 1837017528}
   - start: {x: -15, y: 11}
     length: 5
@@ -43196,8 +42980,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 47
-    nextSegIndex: 45
+    prevSegIndex: 45
+    nextSegIndex: 43
     owner: {fileID: 1837017528}
   - start: {x: -7, y: 11}
     length: 8
@@ -43283,8 +43067,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 48
-    nextSegIndex: 46
+    prevSegIndex: 46
+    nextSegIndex: 44
     owner: {fileID: 1837017528}
   - start: {x: -7, y: 10}
     length: 1
@@ -43300,8 +43084,8 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 49
-    nextSegIndex: 47
+    prevSegIndex: 47
+    nextSegIndex: 45
     owner: {fileID: 1837017528}
   - start: {x: 3, y: 10}
     length: 10
@@ -43407,8 +43191,52 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 238
-    nextSegIndex: 48
+    prevSegIndex: 48
+    nextSegIndex: 46
+    owner: {fileID: 1837017528}
+  - start: {x: 3, y: 9}
+    length: 1
+    dirNorm: {x: 0, y: 1}
+    cellClearances:
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    - 1.8
+    prevSegIndex: 15
+    nextSegIndex: 47
+    owner: {fileID: 1837017528}
+  - start: {x: -5, y: -7}
+    length: 2
+    dirNorm: {x: -1, y: 0}
+    cellClearances:
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    - 0.9899998
+    prevSegIndex: 236
+    nextSegIndex: 234
     owner: {fileID: 1837017528}
   - start: {x: -42, y: 10.8645}
     length: 12.8645
@@ -47802,8 +47630,8 @@ MonoBehaviour:
     length: 6
     dirNorm: {x: -1, y: 0}
     cellClearances:
-    - 1.0009997
-    - 1.0009997
+    - 1.001
+    - 1.001
     - 1.8
     - 1.8
     - 1.8
@@ -49551,7 +49379,7 @@ MonoBehaviour:
     - 1.8
     - 1.8
     - 1.8
-    prevSegIndex: 237
+    prevSegIndex: 49
     nextSegIndex: 235
     owner: {fileID: 1837017528}
   - start: {x: -7, y: -5}
@@ -49606,50 +49434,6 @@ MonoBehaviour:
     - 0.9899998
     - 0.9899998
     prevSegIndex: 235
-    nextSegIndex: 237
-    owner: {fileID: 1837017528}
-  - start: {x: -5, y: -7}
-    length: 2
-    dirNorm: {x: -1, y: 0}
-    cellClearances:
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    - 0.9899998
-    prevSegIndex: 236
-    nextSegIndex: 234
-    owner: {fileID: 1837017528}
-  - start: {x: 3, y: 9}
-    length: 1
-    dirNorm: {x: 0, y: 1}
-    cellClearances:
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    - 1.8
-    prevSegIndex: 17
     nextSegIndex: 49
     owner: {fileID: 1837017528}
   localBoundingRect:
@@ -49658,8 +49442,9 @@ MonoBehaviour:
     y: -16.0001
     width: 62.0002
     height: 40.0002
-  totalLineLength: 634.76196
+  totalLineLength: 626.7529
   bakeVersion: 2
+  bakeIteration: 1
 --- !u!4 &1837017529
 Transform:
   m_ObjectHideFlags: 0
@@ -50625,7 +50410,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -51085,7 +50869,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

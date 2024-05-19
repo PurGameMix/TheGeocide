@@ -19,5 +19,10 @@ namespace PathBerserker2d
         {
             return ReferenceEquals(other, this);
         }
+
+        public override string ToString()
+        {
+            return $"NavSegment({Start} -{Tangent}> {End})";
+        }
     }
 }

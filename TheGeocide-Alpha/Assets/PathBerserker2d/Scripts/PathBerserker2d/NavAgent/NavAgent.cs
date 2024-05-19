@@ -214,7 +214,8 @@ namespace PathBerserker2d
         /// <summary>
         /// Shorthand for transform.position
         /// </summary>
-        public Vector2 Position { 
+        public Vector2 Position
+        {
             get => transform.position;
             set => transform.position = new Vector3(value.x, value.y, transform.position.z);
         }
@@ -457,7 +458,7 @@ namespace PathBerserker2d
             }
 
             NavSegmentPositionPointer p;
-            if (PBWorld.TryFindClosestPointTo(Position, maximumWarpDistance, out p) && CouldBeLocatedAt(p))
+            if (PBWorld.TryMapPoint(Position, maximumWarpDistance, this, out p))
             {
                 this.Position = p.Position;
                 return true;
@@ -519,7 +520,7 @@ namespace PathBerserker2d
             for (int i = 0; i < goals.Length; i++)
             {
                 float maxDist = Vector2.Distance(Position, goals[i]) + 0.1f;
-                if (PBWorld.TryFindClosestPointTo(goals[i], maxDist, out p) && (allowCloseEnoughPath || CouldBeLocatedAt(p)))
+                if (PBWorld.TryMapPoint(goals[i], maxDist, out p) && (allowCloseEnoughPath || CouldBeLocatedAt(p)))
                 {
                     goalPs.Add(p);
                 }
@@ -541,7 +542,7 @@ namespace PathBerserker2d
 
             float maxDist = Vector2.Distance(Position, goal) + 0.1f;
             NavSegmentPositionPointer p;
-            if (!PBWorld.TryFindClosestPointTo(goal, maxDist, out p) || (!allowCloseEnoughPath && !CouldBeLocatedAt(p)))
+            if (!PBWorld.TryMapPoint(goal, maxDist, out p) || (!allowCloseEnoughPath && !CouldBeLocatedAt(p)))
                 return false;
 
             return UpdatePath(new NavSegmentPositionPointer[] { p });
@@ -747,11 +748,11 @@ namespace PathBerserker2d
         {
             float maxDist = Vector2.Distance(Position, goal) + 0.1f;
             NavSegmentPositionPointer startPointer;
-            if (!PBWorld.TryFindClosestPointTo(start, maxDist, out startPointer) || !CouldBeLocatedAt(startPointer))
+            if (!PBWorld.TryMapPoint(start, maxDist, this, out startPointer))
                 return null;
 
             NavSegmentPositionPointer goalPointer;
-            if (!PBWorld.TryFindClosestPointTo(goal, maxDist, out goalPointer) || (!allowCloseEnoughPath && !CouldBeLocatedAt(goalPointer)))
+            if (!PBWorld.TryMapPoint(goal, maxDist, out goalPointer) || (!allowCloseEnoughPath && !CouldBeLocatedAt(goalPointer)))
                 return null;
 
             PathRequest request = new PathRequest(this);
@@ -759,6 +760,21 @@ namespace PathBerserker2d
             request.goals = new[] { goalPointer };
 
             return request;
+        }
+
+        /// <summary>
+        /// Convenience function that will return if the agent could reach the given point from it's current location. It runs synchronously which is not optimal for performance.
+        /// </summary>
+        public bool CanReach(Vector2 goal)
+        {
+            var pr = CreatePathRequest(Position, goal);
+            PBWorld.PathTo(pr);
+
+            while (pr.Status != PathRequest.RequestState.Finished && pr.Status != PathRequest.RequestState.Failed)
+            {
+                // fast spinning
+            }
+            return pr.Status == PathRequest.RequestState.Finished;
         }
 
         private int GetNavTagMask()
@@ -880,10 +896,15 @@ namespace PathBerserker2d
                         OnFailedToFindPath?.Invoke(this);
                         currentPathRequest.Reset();
                     }
-                    else if(currentPathRequest.FailReason == PathRequest.RequestFailReason.NoPathFromStartToGoal && !currentPathRequest.closestReachablePosition.IsInvalid())
+                    else if (currentPathRequest.FailReason == PathRequest.RequestFailReason.NoPathFromStartToGoal && !currentPathRequest.closestReachablePosition.IsInvalid())
                     {
+                        float maxDistance = 10;
+                        float distance = Vector2.Distance(currentPathRequest.closestReachablePosition.Position, Position);
+                        if (distance < maxDistance)
+                        {
+                            UpdatePath(new List<NavSegmentPositionPointer>() { currentPathRequest.closestReachablePosition });
+                        }
                         OnFailedToFindPath?.Invoke(this);
-                        UpdatePath(new List<NavSegmentPositionPointer>() { currentPathRequest.closestReachablePosition });
                     }
                     break;
                 case PathRequest.RequestState.Finished:

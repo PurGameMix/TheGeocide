@@ -11,6 +11,6 @@ namespace PathBerserker2d
 
     interface IClipper
     {
-        ResultType Compute(Polygon sp, Polygon cp, BoolOpType op, ref List<Polygon> result, bool includeOpenPolygons = false);
+        ResultType Compute(Polygon sp, Polygon cp, BoolOpType op, out List<Polygon> result, bool includeOpenPolygons = false);
     }
 }

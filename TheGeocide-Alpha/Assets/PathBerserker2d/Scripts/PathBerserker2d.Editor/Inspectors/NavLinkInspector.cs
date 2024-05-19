@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using System;
 
 namespace PathBerserker2d
 {
@@ -35,7 +36,16 @@ namespace PathBerserker2d
 
             if (distanceLabelStyle == null)
             {
-                distanceLabelStyle = new GUIStyle(EditorStyles.label);
+                try
+                {
+                    // editorStyles.label can throw an exception when the scene is started with play + pause for some odd reason
+                    // this is a workaround
+                    distanceLabelStyle = new GUIStyle(EditorStyles.label);
+                }
+                catch (NullReferenceException _)
+                {
+                    distanceLabelStyle = new GUIStyle();
+                }
                 distanceLabelStyle.alignment = TextAnchor.MiddleCenter;
                 distanceLabelStyle.normal.textColor = Color.white;
             }
@@ -124,10 +134,10 @@ namespace PathBerserker2d
 
                 if (infoOpen)
                 {
-                    
+
                     Vector2 g = link.GoalWorldPosition;
                     Vector2 s = link.StartWorldPosition;
-                    
+
                     EditorGUILayout.LabelField("Traversal Costs", link.TravelCosts(s, g).ToString("N2"));
                     EditorGUILayout.LabelField("Distance", (g - s).magnitude.ToString("N2"));
                     EditorGUILayout.LabelField("Horizontal Distance", Mathf.Abs(g.x - s.x).ToString("N2"));
@@ -157,6 +167,9 @@ namespace PathBerserker2d
 
         private void OnSceneGUI()
         {
+            // when starting a scene in the editor with play + pause, OnEnable might not be called yet
+
+
             NavLink link = target as NavLink;
             Handles.matrix = Matrix4x4.Translate(new Vector3(0, 0, link.transform.position.z));
 

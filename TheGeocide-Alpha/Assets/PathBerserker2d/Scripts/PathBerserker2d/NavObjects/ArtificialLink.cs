@@ -20,6 +20,7 @@ namespace PathBerserker2d
         public int NavTag => 0;
 
         public bool IsTraversable => true;
+        public int PBComponentId => 0;
 
         private int linkType;
 

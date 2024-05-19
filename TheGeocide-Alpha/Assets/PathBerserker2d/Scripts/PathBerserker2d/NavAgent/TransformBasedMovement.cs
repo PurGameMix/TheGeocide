@@ -115,7 +115,6 @@ namespace PathBerserker2d
         private void Agent_StartLinkTraversalEvent(NavAgent agent)
         {
             string linkType = agent.CurrentPathSegment.link.LinkTypeName;
-            var link = agent.CurrentPathSegment.link;
 
             bool unknownLinkType = linkType != "corner" && linkType != "fall" && linkType != "jump" && linkType != "elevator" && linkType != "teleport" && linkType != "climb";
 
@@ -139,7 +138,7 @@ namespace PathBerserker2d
             storedLinkStart = agent.CurrentPathSegment.LinkStart;
 
             float speed = 1;
-            switch (linkType)
+            switch (agent.CurrentPathSegment.link.LinkTypeName)
             {
                 case "corner":
                     if (!enableAgentRotation)
@@ -186,7 +185,7 @@ namespace PathBerserker2d
                     break;
             }
 
-            if (link.LinkTypeName == "elevator")
+            if (agent.CurrentPathSegment.link.LinkTypeName == "elevator")
                 timeToCompleteLink = float.PositiveInfinity;
             else
                 timeToCompleteLink = (deltaDistance / speed);

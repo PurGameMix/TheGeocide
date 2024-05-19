@@ -41,18 +41,18 @@ namespace PathBerserker2d
             return ((IEnumerable<Vector2>)verts).GetEnumerator();
         }
 
-        public float SignedArea()
+        public double SignedArea()
         {
-            float area = 0;
+            double area = 0;
             for (int i = 0, j = verts.Count - 1; i < verts.Count; j = i, i++)
                 area += (verts[i].x - verts[j].x) *
                         (verts[i].y + verts[j].y);
-            return area / 2f;
+            return area / 2.0;
         }
 
-        public float Area()
+        public double Area()
         {
-            return Mathf.Abs(SignedArea());
+            return Math.Abs(SignedArea());
         }
 
         public void MakeCW()

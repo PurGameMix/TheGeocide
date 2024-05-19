@@ -95,6 +95,7 @@ namespace Assets.Scripts.PathBerserker2dExtentions
             catch (NullReferenceException e)
             {
                 _navAgent.ForceStop();
+                Console.WriteLine("Error stoping : " + e.Message);
             }
         }
 

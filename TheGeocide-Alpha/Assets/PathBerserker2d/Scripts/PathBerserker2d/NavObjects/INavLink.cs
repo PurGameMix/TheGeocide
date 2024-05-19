@@ -22,6 +22,7 @@ namespace PathBerserker2d
         GameObject GameObject { get; }
 
         float Clearance { get; }
+        int PBComponentId { get; }
 
         float TravelCosts(Vector2 start, Vector2 goal);
 

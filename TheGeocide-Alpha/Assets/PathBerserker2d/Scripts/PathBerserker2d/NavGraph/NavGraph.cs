@@ -3,12 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.XR.WSA;
 
 namespace PathBerserker2d
 {
-    internal class NavGraph
+    public enum NavGraphChange
+    {
+        NavSurfaceAdded,
+        NavSurfaceRemoved,
+        NavLinkAdded,
+        NavLinkRemoved,
+        SegmentModifierAdded,
+        SegmentModifierRemoved,
+        NavLinkMoved
+    }
+
+    public interface INavGraphChangeSource
+    {
+        /// <summary>
+        /// Called after a group of changes has been applied to the NavGraph. When this is called, the changes are already applied and ready for use. For example NavSurfaceAdded means that that NavSurface is ready to be pathfinded on from now on, link mapping will work etc.
+        /// This may be called multiple times for the segment modifier related events as one SegmentModifier GameObject can produce multiple SegmentModifier changes.
+        /// Parameters:
+        /// - Change type
+        /// - the PBComponentId of the component (NavSurface, Link, SegmentModifier, ...) had. PBComponentId is a custom id that PathBerserker gives each component. Each component (NavSurface, Link, SegmentModifier, ...) has a PBComponentId property you can query to get its id.
+        /// </summary>
+        event Action<NavGraphChange, int> OnGraphChange;
+    }
+
+    internal class NavGraph : INavGraphChangeSource
     {
         public ReaderWriterLock graphLock = new ReaderWriterLock();
+        public event Action<NavGraphChange, int> OnGraphChange;
 
         internal readonly Dictionary<NavSurface, NavSurfaceRecord> segmentTrees = new Dictionary<NavSurface, NavSurfaceRecord>();
 
@@ -24,26 +49,9 @@ namespace PathBerserker2d
 
         public void AddNavSurface(NavSurface surface)
         {
-            for (int i = 0; i < stagedNewSurfaces.Count; i++)
-            {
-                if (stagedNewSurfaces[i].surface == surface)
-                {
-#if PBDEBUG
-                    Debug.Log("AddNavSurface called multiple times!");
-#endif
-                    return;
-                }
-            }
-            if (segmentTrees.ContainsKey(surface))
-            {
-#if PBDEBUG
-                Debug.Log("AddNavSurface called but surface was already addedd!");
-#endif
-                return;
-            }
-
             var addSurface = new AddNavSurfaceChange(surface, pathfinderThreadCount);
-            stagedNewSurfaces.Add(addSurface);
+            if (!stagedNewSurfaces.Any(item => item.surface == surface))
+                stagedNewSurfaces.Add(addSurface);
             changes.Add(addSurface);
         }
 
@@ -87,7 +95,7 @@ namespace PathBerserker2d
             // update navsurface position matricies
             foreach (var entry in segmentTrees)
             {
-                if(entry.Key != null)
+                if (entry.Key != null)
                     entry.Value.LocalToWorld = entry.Key.LocalToWorldMatrix;
             }
 
@@ -104,6 +112,33 @@ namespace PathBerserker2d
             {
                 graphLock.ReleaseWriterLock();
             }
+
+            // fire events
+            if (OnGraphChange != null)
+            {
+                for (int i = 0; i < changes.Count; i++)
+                {
+                    try
+                    {
+                        OnGraphChange(changes[i].ChangeType, changes[i].ChangeSource);
+                    }
+                    catch (Exception e)
+                    {
+                        // we don't want listener exceptions to take down the pathfinding system with it
+                        Debug.LogError(e);
+                    }
+                }
+            }
+
+            stagedNewSurfaces.Clear();
+            changes.Clear();
+        }
+
+        public void ForceApplyChanges()
+        {
+            for (int i = 0; i < changes.Count; i++)
+                changes[i].Apply(this);
+
             stagedNewSurfaces.Clear();
             changes.Clear();
         }
@@ -138,65 +173,39 @@ namespace PathBerserker2d
 
         public bool TryMapPoint(Vector2 position, Func<NavSegmentPositionPointer, bool> pointFilter, out NavSegmentPositionPointer pointer)
         {
-            float pointMapDistance = PathBerserker2dSettings.PointMappingDistance;
-            float halfPointMapDistance = pointMapDistance / 2f;
-            Rect queryAABB = new Rect(position - new Vector2(halfPointMapDistance, halfPointMapDistance), new Vector2(pointMapDistance, pointMapDistance));
-
-            NavGraphNodeCluster closestCluster = null;
-            float minDistance = pointMapDistance;
-            NavSurface closestSurface = null;
-
-            foreach (var pair in segmentTrees)
-            {
-                TryMapPointSurface(pair.Key, pair.Value.Clusters, queryAABB, position, pointFilter, ref minDistance, ref closestCluster, ref closestSurface);
-            }
-
-            if (closestSurface == null)
-            {
-                pointer = NavSegmentPositionPointer.Invalid;
-                return false;
-            }
-            else
-            {
-                pointer = new NavSegmentPositionPointer(
-                    closestSurface,
-                    closestCluster,
-                    closestCluster.DistanceOfPointAlongSegment(closestSurface.WorldToLocal(position)));
-                return true;
-            }
+            return TryMapPoint(position, pointFilter, PathBerserker2dSettings.PointMappingDistance, out pointer);
         }
 
-        public bool TryMapPointWithStaged(Vector2 position, out NavSegmentPositionPointer pointer)
+        public bool TryMapPoint(Vector2 position, Func<NavSegmentPositionPointer, bool> pointFilter, float pointMapDistance, out NavSegmentPositionPointer result)
         {
-            if (TryMapPoint(position, out pointer))
+            float halfPointMapDistance = pointMapDistance / 2f;
+            Rect queryAABB = new Rect(position - new Vector2(halfPointMapDistance, halfPointMapDistance), new Vector2(pointMapDistance, pointMapDistance));
+            float minDistance = pointMapDistance;
+            result = NavSegmentPositionPointer.Invalid;
+            foreach (var pair in segmentTrees)
+            {
+                TryMapPointSurface(pair.Key, pair.Value.Clusters, queryAABB, position, pointFilter, ref minDistance, ref result);
+            }
+
+            return result.IsValid();
+        }
+
+        public bool TryMapPointWithStaged(Vector2 position, out NavSegmentPositionPointer result)
+        {
+            if (TryMapPoint(position, out result))
                 return true;
 
             float pointMapDistance = PathBerserker2dSettings.PointMappingDistance;
             float halfPointMapDistance = pointMapDistance / 2f;
             Rect queryAABB = new Rect(position - new Vector2(halfPointMapDistance, halfPointMapDistance), new Vector2(pointMapDistance, pointMapDistance));
-
-            NavGraphNodeCluster closestCluster = null;
             float minDistance = pointMapDistance;
-            NavSurface closestSurface = null;
-
+            result = NavSegmentPositionPointer.Invalid;
             foreach (var change in stagedNewSurfaces)
             {
-                TryMapPointSurface(change.surface, change.record.Clusters, queryAABB, position, (p) => true, ref minDistance, ref closestCluster, ref closestSurface);
+                TryMapPointSurface(change.surface, change.record.Clusters, queryAABB, position, (p) => true, ref minDistance, ref result);
             }
 
-            if (closestSurface == null)
-            {
-                pointer = NavSegmentPositionPointer.Invalid;
-                return false;
-            }
-            else
-            {
-                pointer = new NavSegmentPositionPointer(
-                    closestSurface,
-                    closestCluster,
-                    closestCluster.DistanceOfPointAlongSegment(closestSurface.WorldToLocal(position)));
-                return true;
-            }
+            return result.IsValid();
         }
 
         public List<NavSubsegmentPointer> BoxCast(Rect rect, float rotation, float filterAngleFrom, float filterAngleTo)
@@ -239,38 +248,10 @@ namespace PathBerserker2d
             return results;
         }
 
+        [Obsolete("Use TryMapPoint instead")]
         public bool TryFindClosestPointTo(Vector2 position, float maxMappingDistance, out NavSegmentPositionPointer pointer)
         {
-            float minDist = float.MaxValue;
-            NavSurface closestSurface = null;
-            NavGraphNodeCluster closestCluster = null;
-            float closestT = 0;
-
-            foreach (var pair in segmentTrees)
-            {
-                Vector2 localPos = pair.Key.WorldToLocal(position);
-                Rect queryRect = new Rect(localPos - Vector2.one * maxMappingDistance, Vector2.one * maxMappingDistance * 2);
-
-                var iterator = pair.Value.Clusters.Query(queryRect);
-                while (iterator.MoveNext())
-                {
-                    var clusterCandidate = pair.Value.Clusters.GetUserData(iterator.Current);
-                    float t = clusterCandidate.DistanceOfPointAlongSegment(localPos);
-                    Vector2 projected = clusterCandidate.GetPositionAlongSegment(t);
-                    float distance = Vector2.Distance(projected, localPos);
-
-                    if (distance < minDist)
-                    {
-                        minDist = distance;
-                        closestSurface = pair.Key;
-                        closestCluster = clusterCandidate;
-                        closestT = t;
-                    }
-                }
-            }
-
-            pointer = new NavSegmentPositionPointer(closestSurface, closestCluster, closestT);
-            return minDist != float.MaxValue;
+            return TryMapPoint(position, (p) => true, maxMappingDistance, out pointer);
         }
 
         public Vector2 GetRandomPointOnGraph()
@@ -289,10 +270,12 @@ namespace PathBerserker2d
             return surf.LocalToWorld(seg.GetPositionAlongSegment(t));
         }
 
-        private void TryMapPointSurface(NavSurface surface, B2DynamicTree<NavGraphNodeCluster> tree, Rect queryAABB, Vector2 position, Func<NavSegmentPositionPointer, bool> filter, ref float minDistance, ref NavGraphNodeCluster closestCluster, ref NavSurface closestSurface)
+        private void TryMapPointSurface(NavSurface surface, B2DynamicTree<NavGraphNodeCluster> tree, Rect queryAABB, Vector2 position, Func<NavSegmentPositionPointer, bool> filter, ref float minDistance, ref NavSegmentPositionPointer result)
         {
             if (!surface.WorldBounds.Overlaps(queryAABB))
+            {
                 return;
+            }
 
             Vector2 localPoint = surface.WorldToLocal(position);
             Rect localQuery = new Rect(surface.WorldToLocal(queryAABB.position), queryAABB.size);
@@ -301,16 +284,37 @@ namespace PathBerserker2d
             while (iterator.MoveNext())
             {
                 var clusterCandidate = tree.GetUserData(iterator.Current);
-
                 float t = clusterCandidate.DistanceOfPointAlongSegment(localPoint);
                 Vector2 proj = clusterCandidate.GetPositionAlongSegment(t);
                 float dist = (proj - localPoint).magnitude;
 
-                if (dist < minDistance && filter(new NavSegmentPositionPointer(surface, clusterCandidate, t)))
+                if (dist >= minDistance)
+                    // closest point is already to far away
+                    continue;
+
+                if (filter(new NavSegmentPositionPointer(surface, clusterCandidate, t)))
                 {
                     minDistance = dist;
-                    closestCluster = clusterCandidate;
-                    closestSurface = surface;
+                    result = new NavSegmentPositionPointer(surface, clusterCandidate, t);
+                }
+                else
+                {
+                    // sub sample segment
+                    for (t = 0; t < clusterCandidate.Length; t += 0.5f)
+                    {
+                        if (filter(new NavSegmentPositionPointer(surface, clusterCandidate, t)))
+                        {
+                            proj = clusterCandidate.GetPositionAlongSegment(t);
+                            dist = (proj - localPoint).magnitude;
+
+                            if (dist >= minDistance)
+                                continue;
+
+                            result = new NavSegmentPositionPointer(surface, clusterCandidate, t);
+                            minDistance = dist;
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -354,6 +358,14 @@ namespace PathBerserker2d
         private void InternalAddNavSurface(NavSurface surface,
             NavSurfaceRecord record, int[] proxyIndecies)
         {
+            if (segmentTrees.ContainsKey(surface))
+            {
+#if PBDEBUG
+                Debug.Log("AddNavSurface called but surface was already added!");
+#endif
+                return;
+            }
+
             // add corner links for connected segments
             for (int iSeg = 0; iSeg < surface.NavSegments.Count; iSeg++)
             {
@@ -401,7 +413,7 @@ namespace PathBerserker2d
 
         private void CreateCornerLinksForClosePoints(Vector2 point, NavGraphNodeCluster pointOwner, int pointOwnerProxyIndex, B2DynamicTree<NavGraphNodeCluster> clusterTree, int[] proxyIndicies, NavSurface surface)
         {
-            int prevSegProxyIndex = pointOwner.HasPrev ?proxyIndicies[pointOwner.PrevSegmentIndex] : -1;
+            int prevSegProxyIndex = pointOwner.HasPrev ? proxyIndicies[pointOwner.PrevSegmentIndex] : -1;
 
             Vector2 queryRectSize = new Vector2(0.01f, 0.01f);
             Rect query = new Rect(point - queryRectSize, point + queryRectSize);
@@ -523,7 +535,7 @@ namespace PathBerserker2d
 
             start.cluster.RemoveNode(link);
             RemoveSoftRefLink(link, start.surface);
-            if (start.surface != goal.surface)
+            if (start.surface != goal.surface && segmentTrees.ContainsKey(goal.surface))
                 RemoveSoftRefLink(link, goal.surface);
 
             link.OnRemove();
@@ -565,24 +577,14 @@ namespace PathBerserker2d
 
         private void InternalAddSegmentModifier(NavAreaMarkerInstance mod)
         {
-            var cluster = GetClusterAt(mod.position);
-            cluster.AddNodeClusterModifier(mod);
+            if (TryGetClusterAt(mod.position, out var cluster))
+                cluster.AddNodeClusterModifier(mod);
         }
 
         private void InternalRemoveSegmentModifier(NavAreaMarkerInstance mod)
         {
-            var cluster = GetClusterAt(mod.position);
-            cluster.RemoveNodeClusterModifier(mod);
-        }
-
-        public NavGraphNodeCluster GetClusterAt(NavSubsegmentPointer tPoint)
-        {
-            return segmentTrees[tPoint.surface].Clusters.GetUserData(tPoint.proxyDataIndex);
-        }
-
-        public NavGraphNodeCluster GetClusterAt(NavSegmentPointer tPoint)
-        {
-            return segmentTrees[tPoint.surface].Clusters.GetUserData(tPoint.proxyDataIndex);
+            if (TryGetClusterAt(mod.position, out var cluster))
+                cluster.RemoveNodeClusterModifier(mod);
         }
 
         public bool TryGetClusterAt(NavSegmentPositionPointer tPoint, out NavGraphNodeCluster cluster)
@@ -597,13 +599,31 @@ namespace PathBerserker2d
             return true;
         }
 
+        public bool TryGetClusterAt(NavSubsegmentPointer tPoint, out NavGraphNodeCluster cluster)
+        {
+            NavSurfaceRecord navRec;
+            if (tPoint.IsInvalid() || !segmentTrees.TryGetValue(tPoint.surface, out navRec))
+            {
+                cluster = null;
+                return false;
+            }
+
+            cluster = navRec.Clusters.GetUserData(tPoint.proxyDataIndex);
+            return true;
+        }
+
         interface IGraphChange
         {
+            NavGraphChange ChangeType { get; }
+            int ChangeSource { get; }
             void Apply(NavGraph graph);
         }
 
         class AddNavSurfaceChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.NavSurfaceAdded;
+            public int ChangeSource { get; }
+
             public readonly NavSurfaceRecord record;
             public readonly NavSurface surface;
             int[] proxyIndecies;
@@ -611,6 +631,7 @@ namespace PathBerserker2d
             public AddNavSurfaceChange(NavSurface surface, int threadCount)
             {
                 this.surface = surface;
+                this.ChangeSource = surface.PBComponentId;
 
                 var tree = new B2DynamicTree<NavGraphNodeCluster>(surface.NavSegments.Count + 10);
 
@@ -634,11 +655,16 @@ namespace PathBerserker2d
 
         class RemoveNavSurfaceChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.NavSurfaceRemoved;
+            public int ChangeSource { get; }
+
             NavSurface surface;
+            GameObject changeSource;
 
             public RemoveNavSurfaceChange(NavSurface surface)
             {
                 this.surface = surface;
+                this.ChangeSource = surface.PBComponentId;
             }
 
             public void Apply(NavGraph graph)
@@ -652,6 +678,9 @@ namespace PathBerserker2d
 
         class AddNavLinkChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.NavLinkAdded;
+            public int ChangeSource { get; }
+
             INavLinkInstance link;
             NavSegmentPositionPointer start;
             NavSegmentPositionPointer goal;
@@ -661,6 +690,7 @@ namespace PathBerserker2d
                 this.link = link;
                 this.start = start;
                 this.goal = goal;
+                ChangeSource = link.PBComponentId;
             }
 
             public void Apply(NavGraph graph)
@@ -674,6 +704,9 @@ namespace PathBerserker2d
 
         class RemoveNavLinkChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.NavLinkRemoved;
+            public int ChangeSource { get; }
+
             INavLinkInstance link;
             NavSegmentPositionPointer start;
             NavSegmentPositionPointer goal;
@@ -683,6 +716,7 @@ namespace PathBerserker2d
                 this.link = link;
                 this.start = start;
                 this.goal = goal;
+                ChangeSource = link.PBComponentId;
             }
 
             public void Apply(NavGraph graph)
@@ -696,6 +730,9 @@ namespace PathBerserker2d
 
         class MoveNavLinkStartChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.NavLinkMoved;
+            public int ChangeSource { get; }
+
             INavLinkInstance link;
             NavSegmentPositionPointer start;
             NavSegmentPositionPointer goal;
@@ -707,6 +744,7 @@ namespace PathBerserker2d
                 this.start = start;
                 this.goal = goal;
                 this.oldStart = oldStart;
+                ChangeSource = link.PBComponentId;
             }
 
             public void Apply(NavGraph graph)
@@ -720,6 +758,9 @@ namespace PathBerserker2d
 
         class MoveNavLinkGoalChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.NavLinkMoved;
+            public int ChangeSource { get; }
+
             INavLinkInstance link;
             NavSegmentPositionPointer start;
             NavSegmentPositionPointer goal;
@@ -731,6 +772,7 @@ namespace PathBerserker2d
                 this.start = start;
                 this.goal = goal;
                 this.oldGoal = oldGoal;
+                ChangeSource = link.PBComponentId;
             }
 
             public void Apply(NavGraph graph)
@@ -744,11 +786,15 @@ namespace PathBerserker2d
 
         class AddSegmentModifierChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.SegmentModifierAdded;
+            public int ChangeSource { get; }
+
             NavAreaMarkerInstance mod;
 
             public AddSegmentModifierChange(NavAreaMarkerInstance mod)
             {
                 this.mod = mod;
+                ChangeSource = mod.PBComponentId;
             }
 
             public void Apply(NavGraph graph)
@@ -762,11 +808,15 @@ namespace PathBerserker2d
 
         class RemoveSegmentModifierChange : IGraphChange
         {
+            public NavGraphChange ChangeType => NavGraphChange.SegmentModifierRemoved;
+            public int ChangeSource { get; }
+
             NavAreaMarkerInstance mod;
 
             public RemoveSegmentModifierChange(NavAreaMarkerInstance mod)
             {
                 this.mod = mod;
+                ChangeSource = mod.PBComponentId;
             }
 
             public void Apply(NavGraph graph)

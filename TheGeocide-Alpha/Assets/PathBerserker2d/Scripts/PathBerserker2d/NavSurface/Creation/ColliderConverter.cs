@@ -171,7 +171,7 @@ namespace PathBerserker2d
         private static void ConnectorToContours(StableConnector<int> connector, Vector3[] verts, ref List<Polygon> polygons)
         {
             List<Contour> holes = new List<Contour>(1);
-            List<Tuple<float, Polygon>> hulls = new List<Tuple<float, Polygon>>(1);
+            List<Tuple<double, Polygon>> hulls = new List<Tuple<double, Polygon>>(1);
             foreach (var chain in connector.closedPolygons)
             {
                 List<Vector2> points = new List<Vector2>(chain.points.Count);
@@ -190,9 +190,9 @@ namespace PathBerserker2d
                 }*/
 
                 Contour c = new Contour(points);
-                float area = c.SignedArea();
+                double area = c.SignedArea();
                 if (area > 0)
-                    hulls.Add(new Tuple<float, Polygon>(area, new Polygon(c)));
+                    hulls.Add(new Tuple<double, Polygon>(area, new Polygon(c)));
                 else
                     holes.Add(c);
             }

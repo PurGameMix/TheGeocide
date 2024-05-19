@@ -79,12 +79,14 @@ namespace PathBerserker2d
                         //    //testCandidate.Draw();
                         //});
 
-                        clipper.Compute(testCandidate, walkSpacePolygon, BoolOpType.INTERSECTION, ref intersections);
+                        clipper.Compute(testCandidate, walkSpacePolygon, BoolOpType.INTERSECTION, out var clipResult);
+                        intersections.AddRange(clipResult);
                     }
                     else
                         intersections.Add(testCandidate);
                 }
                 //could do a union now; to evaluate
+                // this is nonsense, but better leave as is. It ensures that all cells are the same size
                 if (intersections.Count == -1)
                 {
                     var newSeg = CreateFreeSegment(cellCount, owner, a, dir, length);
@@ -490,13 +492,11 @@ namespace PathBerserker2d
         private float CalculateCellClearance(Polygon cell, Vector2 lineNormalNorm, float minClearance, float maxClearance, List<Polygon> otherPolygons)
         {
             float clearance = maxClearance;
-            List<Polygon> resultPolygon = new List<Polygon>();
             foreach (var testCandidate in otherPolygons)
             {
                 if (testCandidate.Hull.IsClosed)
                 {
-                    resultPolygon.Clear();
-                    var resultType = clipper.Compute(cell, testCandidate, BoolOpType.INTERSECTION, ref resultPolygon);
+                    var resultType = clipper.Compute(cell, testCandidate, BoolOpType.INTERSECTION, out var resultPolygon);
 
                     /*var a = cell;
                     var b = testCandidate;
@@ -511,12 +511,12 @@ namespace PathBerserker2d
                     if (resultType == ResultType.NoOverlap)
                         continue;
 
-                    float combinedArea = 0;
+                    double combinedArea = 0;
                     for (int i = 0; i < resultPolygon.Count; i++)
                     {
                         combinedArea += resultPolygon[i].Hull.Area();
                     }
-                    if (combinedArea < 0.001f)
+                    if (combinedArea < 0.001)
                         continue;
 
                     foreach (var intersectionPolygon in resultPolygon)

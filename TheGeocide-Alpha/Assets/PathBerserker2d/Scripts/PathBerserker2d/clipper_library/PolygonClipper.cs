@@ -21,8 +21,9 @@ namespace PathBerserker2d
                 sweepEventPool[i] = new SweepEvent();
         }
 
-        public ResultType Compute(Polygon sp, Polygon cp, BoolOpType op, ref List<Polygon> result, bool includeOpenPolygons = false)
+        public ResultType Compute(Polygon sp, Polygon cp, BoolOpType op, out List<Polygon> result, bool includeOpenPolygons = false)
         {
+            result = new List<Polygon>();
             if (sp.IsEmpty || cp.IsEmpty)
             {
                 return ResultType.NoOverlap;
@@ -192,11 +193,11 @@ namespace PathBerserker2d
 
                 List<Contour> holes = new List<Contour>(contours.Length - 1);
                 Contour hull = null;
-                float largestArea = 0;
+                double largestArea = 0;
 
                 foreach (var contour in contours)
                 {
-                    float area = contour.Area();
+                    double area = contour.Area();
 
                     if (area > largestArea)
                     {

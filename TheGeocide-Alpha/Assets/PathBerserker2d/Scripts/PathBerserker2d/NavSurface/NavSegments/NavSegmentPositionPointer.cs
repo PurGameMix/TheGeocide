@@ -25,7 +25,7 @@ namespace PathBerserker2d
             this.surface = surface;
             this.cluster = cluster;
             this.t = t;
-            this.bakeIteration = cluster != null ? cluster.owner.bakeIteration : -1;
+            this.bakeIteration = surface != null ? surface.BakeIteration : -1;
         }
 
         public static bool operator ==(NavSegmentPositionPointer a, NavSegmentPositionPointer b)

@@ -5,7 +5,7 @@ namespace PathBerserker2d
     /// <summary>
     /// Make Agent walk to specified goal, if it isn't there already. 
     /// </summary>
-    public class GoalWalker : MonoBehaviour
+    class GoalWalker : MonoBehaviour
     {
         [SerializeField]
         public NavAgent navAgent;

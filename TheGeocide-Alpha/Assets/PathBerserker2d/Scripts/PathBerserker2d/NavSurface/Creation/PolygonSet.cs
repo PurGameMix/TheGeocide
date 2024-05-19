@@ -14,27 +14,26 @@ namespace PathBerserker2d
             {
                 // try to merge the new polygon with the existing once
                 List<Polygon> polygonsToInsert = new List<Polygon>(4);
-                List<Polygon> resultPolys = new List<Polygon>();
                 var iterator = polygonTree.Query(newPoly.BoundingRect);
                 while (iterator.MoveNext())
                 {
                     var poly = polygonTree.GetUserData(iterator.Current);
                     if (poly.Hull.IsClosed)
                     {
-                        var resultType = clipper.Compute(poly, newPoly, BoolOpType.UNION, ref resultPolys);
+                        var resultType = clipper.Compute(poly, newPoly, BoolOpType.UNION, out var resultPolys);
                         if (resultType == ResultType.Clipped)
                         {
                             // delete poly
                             polygonTree.RemoveProxy(iterator.Current);
                             newPoly = resultPolys[0];
-                            resultPolys.Clear();
                         }
                     }
                     else
                     {
-                        var resultType = clipper.Compute(poly, newPoly, BoolOpType.DIFFERENCE, ref polygonsToInsert, true);
+                        var resultType = clipper.Compute(poly, newPoly, BoolOpType.DIFFERENCE, out var resultPolys, true);
                         if (resultType == ResultType.Clipped)
                         {
+                            polygonsToInsert.AddRange(resultPolys);
                             polygonTree.RemoveProxy(iterator.Current);
                         }
                     }
@@ -45,7 +44,7 @@ namespace PathBerserker2d
             }
             else
             {
-                List<Polygon> resultPolys = new List<Polygon>();
+                List<Polygon> workList = new List<Polygon>();
                 List<Polygon> polygonsToTest = new List<Polygon>();
 
                 polygonsToTest.Add(newPoly);
@@ -58,14 +57,13 @@ namespace PathBerserker2d
                         continue;
                     foreach (var polyToTest in polygonsToTest)
                     {
-                        var resultType = clipper.Compute(polyToTest, poly, BoolOpType.DIFFERENCE, ref resultPolys, true);
-                        if (resultType == ResultType.NoOverlap)
-                            resultPolys.Add(polyToTest);
+                        var resultType = clipper.Compute(polyToTest, poly, BoolOpType.DIFFERENCE, out var result, true);
+                        workList.AddRange(result);
                     }
                     var swap = polygonsToTest;
-                    polygonsToTest = resultPolys;
-                    resultPolys = swap;
-                    resultPolys.Clear();
+                    polygonsToTest = workList;
+                    workList = swap;
+                    workList.Clear();
                 }
 
                 foreach (var poly in polygonsToTest)

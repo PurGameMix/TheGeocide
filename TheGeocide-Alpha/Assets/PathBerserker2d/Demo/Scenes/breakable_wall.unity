@@ -537,6 +537,7 @@ MonoBehaviour:
     height: 0.30020022
   totalLineLength: 13.399999
   bakeVersion: 2
+  bakeIteration: 1
 --- !u!4 &583088523
 Transform:
   m_ObjectHideFlags: 0

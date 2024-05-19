@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88937588691462845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.457, y: -7.646, z: 66.69901}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9156416407610951332}
@@ -58,7 +58,19 @@ MonoBehaviour:
   - 1
   - -1
   - 1
+  allowCloseEnoughPath: 0
+  movementSpeed: 5
+  cornerSpeed: 100
+  jumpSpeed: 5
+  fallSpeed: 5
+  climbSpeed: 5
+  enableDebugMessages: 0
   navTagTraversalCostMultipliers:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   - 1
   status: 0
   navTagMask: -1
@@ -75,6 +87,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navAgent: {fileID: 88937588691462847}
+  retryCount: 10
+  keepWalkingRandomly: 1
 --- !u!114 &88937588691462817
 MonoBehaviour:
   m_ObjectHideFlags: 0

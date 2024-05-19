@@ -24,7 +24,7 @@ namespace PathBerserker2d
     ///
     /// See also \ref cc_navagent "Core concepts: NavAgent".
     /// <remarks/>
-    [ScriptExecutionOrder(-50)]
+    [ScriptExecutionOrder(-55)]
     [AddComponentMenu("PathBerserker2d/Nav Surface")]
     public class NavSurface : MonoBehaviour, INavSegmentCreationParamProvider
     {
@@ -38,7 +38,11 @@ namespace PathBerserker2d
 
         public float CellSize => cellSize;
 
-        public LayerMask ColliderMask => includedColliders;
+        public LayerMask ColliderMask
+        {
+            get => includedColliders;
+            set => includedColliders = value;
+        }
 
         /// <summary>
         /// Length of all segments combined
@@ -61,15 +65,26 @@ namespace PathBerserker2d
         public float MinSegmentLength => minSegmentLength;
 
         /// <summary>
-        /// Gets fired after a BakeJob initiated by a call to Bake() completes. 
+        /// Gets fired after a BakeJob initiated by a call to Bake() completes.
+        /// THIS DOES NOT mean that the changes are already available to the pathfinder. That will happen later.
+        /// Use OnReadyToPathfind for that instead. This only really tells you when you may start a new bake.
         /// </summary>
         public event Action OnBakingCompleted;
+
+        /// Called after the NavSurface has been added to the pathfinder. Usually sometime after OnBakingCompleted has been called. Only know are the changes from baking actually visible in the pathfinder.
+        /// IF THERE ARE MULTIPLE NavSurface Components on this GameObject you are ass out. These events will fire for both of them always. Don't put 2 NavSurfaces on the same GameObject!
+        public event Action OnReadyToPathfind;
+
+        /// Called after the NavSurface is removed from the pathfinder. Usually after the NavSurface is deleted OR REBAKED! Removing the old NavSurface data to replace it with new baked data will trigger this event. When this event is called, you can be sure that the old data NavData is no longer in use for anything.
+        /// IF THERE ARE MULTIPLE NavSurface Components on this GameObject you are ass out. These events will fire for both of them always. Don't put 2 NavSurfaces on the same GameObject!
+        public event Action OnRemovedFromPathfinding;
 
         internal List<NavSegment> NavSegments => navSegments;
         internal NavSurfaceBakeJob BakeJob { get; private set; }
         internal bool hasDataChanged;
         internal int BakeVersion => bakeVersion;
         internal int BakeIteration => bakeIteration;
+        internal int PBComponentId { get; private set; }
 
         [Header("Bake Settings")]
         [Tooltip("Maximum height that gets checked for potential obstructions. Should equal the height of your largest NavAgent.")]
@@ -120,11 +135,22 @@ namespace PathBerserker2d
         // number of distinct bakes
         private int bakeIteration = 0;
 
+        Matrix4x4 localToWorldMat;
+
         #region Unity_Methods
+        private void Awake()
+        {
+            UpdateLocalMatrix();
+            PBComponentId = PBWorld.GeneratePBComponentId();
+            PBWorld.NavGraphChangeSource.OnGraphChange += NavGraphChangeSource_OnGraphChange;
+        }
+
         private void OnEnable()
         {
             if (navSegments != null && navSegments.Count > 0)
+            {
                 PBWorld.NavGraph.AddNavSurface(this);
+            }
         }
 
         private void OnDisable()
@@ -145,6 +171,11 @@ namespace PathBerserker2d
             hasDataChanged = true;
         }
 
+        private void Update()
+        {
+            UpdateLocalMatrix();
+        }
+
         #endregion
 
         public Vector2 LocalToWorld(Vector2 pos)
@@ -156,7 +187,15 @@ namespace PathBerserker2d
         {
             get
             {
-                return Matrix4x4.TRS(transform.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z), Vector3.one);
+                return localToWorldMat;
+            }
+        }
+
+        internal Matrix4x4 LocalToWorldMatrixEditor
+        {
+            get
+            {
+                return Matrix4x4.TRS(transform.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z), Vector3.one); ;
             }
         }
 
@@ -188,6 +227,7 @@ namespace PathBerserker2d
 
         internal void StartBakeJob()
         {
+            UpdateLocalMatrix();
             if (BakeJob == null)
                 BakeJob = new NavSurfaceBakeJob(this);
             else
@@ -245,6 +285,37 @@ namespace PathBerserker2d
             bakeVersion = CurrentBakeVersion;
             hasDataChanged = true;
             bakeIteration++;
+        }
+
+        /// <summary>
+        /// Filters and rethrows change events that have this NavSurface as target. It's a convenience feature.
+        /// You may also just subscribe to PBWorld.NavGraphChangeSource.OnGraphChange and filter the changes yourself.
+        /// </summary>
+        /// <param name="arg1"></param>
+        /// <param name="arg2"></param>
+        /// <exception cref="NotImplementedException"></exception>
+        private void NavGraphChangeSource_OnGraphChange(NavGraphChange arg1, int srcCompId)
+        {
+            if (srcCompId == PBComponentId)
+            {
+                switch (arg1)
+                {
+                    case NavGraphChange.NavSurfaceAdded:
+                        OnReadyToPathfind?.Invoke();
+                        break;
+                    case NavGraphChange.NavSurfaceRemoved:
+                        OnRemovedFromPathfinding?.Invoke();
+                        break;
+                    default:
+                        // this could happen if there is another component on this gameobject which the change event was directed at. Just ignore it.
+                        break;
+                }
+            }
+        }
+
+        private void UpdateLocalMatrix()
+        {
+            localToWorldMat = Matrix4x4.TRS(transform.position, Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z), Vector3.one);
         }
     }
 }

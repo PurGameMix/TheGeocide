@@ -46,6 +46,8 @@ namespace PathBerserker2d
         [SerializeField]
         public float updateAfterTime = 1;
 
+        public int PBComponentId { get; }
+
         private RectTransform rectTransform;
         private List<NavAreaMarkerInstance> instances;
         private float lastMovementTime;
@@ -153,6 +155,8 @@ namespace PathBerserker2d
         public float Length => position.length;
 
         public NavSubsegmentPointer position;
+        public int PBComponentId => original.PBComponentId;
+
         NavAreaMarker original;
 
         public NavAreaMarkerInstance(NavAreaMarker original)

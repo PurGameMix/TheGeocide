@@ -141,9 +141,9 @@ namespace PathBerserker2d
             UpdateBounds();
         }
 
-        public float SignedArea()
+        public double SignedArea()
         {
-            float area = Hull.SignedArea();
+            double area = Hull.SignedArea();
             foreach (var hole in Holes)
                 area += hole.SignedArea();
             return area;

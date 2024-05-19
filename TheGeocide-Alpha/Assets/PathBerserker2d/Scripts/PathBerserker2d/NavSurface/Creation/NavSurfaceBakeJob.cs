@@ -59,6 +59,9 @@ namespace PathBerserker2d
 
         private void Bake()
         {
+            // filter out empty polygons
+            polygons = polygons.Where(p => p.Length > 0).ToArray();
+
             if (polygons.Length == 0)
             {
                 navSegments = new List<NavSegment>(0);

@@ -15,8 +15,10 @@ namespace PathBerserker2d
 
         Clipper clipper = new Clipper();
 
-        public ResultType Compute(Polygon sp, Polygon cp, BoolOpType op, ref List<Polygon> result, bool includeOpenPolygons = false)
+        public ResultType Compute(Polygon sp, Polygon cp, BoolOpType op, out List<Polygon> result, bool includeOpenPolygons = false)
         {
+            result = new List<Polygon>();
+
             if (!sp.BoundsOverlap(cp))
             {
                 return ResultType.NoOverlap;
@@ -25,17 +27,15 @@ namespace PathBerserker2d
             AddPolygonToClipper(sp, PolyType.ptSubject);
             AddPolygonToClipper(cp, PolyType.ptClip);
 
-            float prevArea;
+            double prevArea = 0;
             ClipType clipType;
             switch (op)
             {
                 case BoolOpType.INTERSECTION:
                     clipType = ClipType.ctIntersection;
-                    prevArea = sp.SignedArea();
                     break;
                 case BoolOpType.UNION:
                     clipType = ClipType.ctUnion;
-                    prevArea = sp.SignedArea() + cp.SignedArea();
                     break;
                 case BoolOpType.DIFFERENCE:
                     clipType = ClipType.ctDifference;
@@ -48,7 +48,6 @@ namespace PathBerserker2d
             PolyTree resultTree = new PolyTree();
             bool succeeded = clipper.Execute(clipType, resultTree);
 
-            result = new List<Polygon>();
             GetResultsFromNode(resultTree, result, includeOpenPolygons);
             foreach (var poly in result)
             {
@@ -58,7 +57,7 @@ namespace PathBerserker2d
             clipper.Clear();
 
             bool intersectionHappened = false;
-            float afterArea = 0;
+            double afterArea = 0;
             switch (op)
             {
                 case BoolOpType.INTERSECTION:
@@ -67,20 +66,17 @@ namespace PathBerserker2d
                 case BoolOpType.UNION:
                     if (result.Count == 1)
                         intersectionHappened = true;
+                    break;
+                case BoolOpType.DIFFERENCE:
+                    if (result.Count > 1)
+                        intersectionHappened = true;
                     else
                     {
                         foreach (var poly in result)
                             afterArea += poly.SignedArea();
 
-                        intersectionHappened = !(Mathf.Abs(afterArea - prevArea) < 0.01f);
-
+                        intersectionHappened = !(Math.Abs(afterArea - prevArea) < 0.001);
                     }
-                    break;
-                case BoolOpType.DIFFERENCE:
-                    foreach (var poly in result)
-                        afterArea += poly.SignedArea();
-
-                    intersectionHappened = !(Mathf.Abs(afterArea - prevArea) < 0.001f);
                     break;
                 default:
                     throw new ArgumentException("Unknown op type " + op);

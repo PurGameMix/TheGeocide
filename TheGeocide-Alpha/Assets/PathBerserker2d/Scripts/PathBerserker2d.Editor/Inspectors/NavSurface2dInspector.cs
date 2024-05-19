@@ -54,7 +54,7 @@ namespace PathBerserker2d
             EditorGUILayout.PropertyField(spIncludedColliders);
             EditorGUILayout.PropertyField(spMaxSlopeAngle);
             EditorGUILayout.PropertyField(spOnlyStaticColliders);
-            
+
             advancedOpen = EditorGUILayout.BeginFoldoutHeaderGroup(advancedOpen, "Advanced");
             if (advancedOpen)
             {
@@ -132,9 +132,13 @@ namespace PathBerserker2d
                 Debug.Log("Bake completed in " + navSurface.BakeJob.TotalBakeTime + "ms");
 #endif
                 EditorApplication.update -= WaitForBakeJobToFinish;
-                navSurface.UpdateInternalData(navSurface.BakeJob.navSegments, navSurface.BakeJob.bounds);
 
                 EditorUtility.SetDirty(navSurface);
+
+                if (!Application.IsPlaying(navSurface))
+                {
+                    navSurface.UpdateInternalData(navSurface.BakeJob.navSegments, navSurface.BakeJob.bounds);
+                }
 
                 serializedObject.Update();
                 SceneView.RepaintAll();

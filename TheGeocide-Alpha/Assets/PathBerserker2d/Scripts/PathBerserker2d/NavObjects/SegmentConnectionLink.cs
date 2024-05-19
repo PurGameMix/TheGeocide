@@ -19,6 +19,7 @@ namespace PathBerserker2d
         public int NavTag => 0;
 
         public bool IsTraversable => true;
+        public int PBComponentId => 0;
 
         private NavSegmentPositionPointer start;
         private NavSegmentPositionPointer goal;
@@ -38,7 +39,7 @@ namespace PathBerserker2d
 
         public void OnRemove()
         {
-            
+
         }
     }
 }

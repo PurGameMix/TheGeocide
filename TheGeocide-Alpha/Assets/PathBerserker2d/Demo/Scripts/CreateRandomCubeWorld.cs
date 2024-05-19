@@ -32,10 +32,6 @@ namespace PathBerserker2d.Demo
                 for (int i = 0; i < transform.childCount; i++)
                     Destroy(transform.GetChild(i).gameObject);
                 GenerateLevel();
-                GenerateLevel();
-                GenerateLevel();
-                GenerateLevel();
-                GenerateLevel();
             }
         }
 

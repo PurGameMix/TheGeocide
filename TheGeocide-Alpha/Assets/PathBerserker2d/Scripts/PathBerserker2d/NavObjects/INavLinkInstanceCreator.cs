@@ -6,6 +6,7 @@ namespace PathBerserker2d
     {
         int LinkType { get; }
         int NavTag { get; }
+        int PBComponentId { get; }
 
         GameObject GameObject { get; }
         float Clearance { get; }

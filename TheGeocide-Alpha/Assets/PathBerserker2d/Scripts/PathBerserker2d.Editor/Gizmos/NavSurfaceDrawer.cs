@@ -86,7 +86,7 @@ namespace PathBerserker2d
             }
             foreach (var ml in miterLines)
             {
-                Graphics.DrawMeshNow(ml, surface.LocalToWorldMatrix);
+                Graphics.DrawMeshNow(ml, surface.LocalToWorldMatrixEditor);
             }
         }
 

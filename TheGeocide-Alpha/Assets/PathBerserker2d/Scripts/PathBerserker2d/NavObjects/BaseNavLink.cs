@@ -49,6 +49,8 @@ namespace PathBerserker2d
             set { maxTraversableDistance = value; }
         }
 
+        public int PBComponentId { get; protected set; }
+
         [Tooltip("Cost of traversing this link. If this is <= 0 the distance between start and goal is used instead.")]
         [SerializeField]
         protected float costOverride = -1;
@@ -76,6 +78,11 @@ namespace PathBerserker2d
         /// </summary>
         [SerializeField, Tooltip("Should this link be automatically mapped. If not, you have to call UpdateMapping() yourself.")]
         public bool autoMap = true;
+
+        protected virtual void Awake()
+        {
+            PBComponentId = PBWorld.GeneratePBComponentId();
+        }
 
         protected virtual void OnValidate()
         {

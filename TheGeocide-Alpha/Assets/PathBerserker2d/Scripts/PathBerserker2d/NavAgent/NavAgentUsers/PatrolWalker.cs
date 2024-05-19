@@ -48,17 +48,6 @@ namespace PathBerserker2d
             navAgent.PathTo(goal.position);
         }
 
-        private void OnEnable()
-        {
-            currentGoal = 0;
-            navAgent.PathTo(goal.position);
-        }
-
-        public void RefreshPath()
-        {
-            navAgent.PathTo(goal.position);
-        }
-
         void Update()
         {
             if (goals == null)
@@ -85,6 +74,14 @@ namespace PathBerserker2d
         private void Reset()
         {
             navAgent = GetComponent<NavAgent>();
+        }
+
+        /// <summary>
+        /// Added be me
+        /// </summary>
+        public void RefreshPath()
+        {
+            navAgent.PathTo(goal.position);
         }
     }
 }

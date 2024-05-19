@@ -24,6 +24,7 @@ namespace PathBerserker2d
                 isTraversable = value;
             }
         }
+        public int PBComponentId => creator.PBComponentId;
         internal INavLinkInstanceCreator Creator => creator;
 
 

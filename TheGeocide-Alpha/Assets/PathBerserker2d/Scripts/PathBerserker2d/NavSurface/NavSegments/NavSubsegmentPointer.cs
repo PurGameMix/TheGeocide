@@ -15,6 +15,7 @@ namespace PathBerserker2d
         public readonly float length;
         public readonly int proxyDataIndex;
         public readonly NavSurface surface;
+        public readonly int bakeIteration;
 
         public NavSubsegmentPointer(NavSurface surface, int proxyDataIndex, float t, float length)
         {
@@ -22,6 +23,7 @@ namespace PathBerserker2d
             this.proxyDataIndex = proxyDataIndex;
             this.t = t;
             this.length = length;
+            this.bakeIteration = surface != null ? surface.BakeIteration : -1;
         }
 
         public static bool operator ==(NavSubsegmentPointer a, NavSubsegmentPointer b)
@@ -45,6 +47,11 @@ namespace PathBerserker2d
                    length == other.length &&
                    proxyDataIndex == other.proxyDataIndex &&
                    EqualityComparer<NavSurface>.Default.Equals(surface, other.surface);
+        }
+
+        public bool IsInvalid()
+        {
+            return surface == null || bakeIteration != surface.BakeIteration;
         }
 
         public override int GetHashCode()

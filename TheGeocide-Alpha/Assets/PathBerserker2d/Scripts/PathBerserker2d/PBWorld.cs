@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -27,8 +28,9 @@ namespace PathBerserker2d
         }
 
         private static PBWorld instance;
-  
+
         internal static NavGraph NavGraph { get; set; }
+        public static INavGraphChangeSource NavGraphChangeSource => NavGraph;
 
         // threading stuff
         CancellationTokenSource pathfinderThreadCancelationSource;
@@ -45,7 +47,7 @@ namespace PathBerserker2d
         private void SceneManager_sceneUnloaded(Scene arg0)
         {
             // cycle the navgraph one more time to remove all unloaded navgraphs in case the scene is just reloaded
-            NavGraph.Update();
+            NavGraph.ForceApplyChanges();
         }
 
         private void OnEnable()
@@ -73,6 +75,7 @@ namespace PathBerserker2d
             if (Time.time - lastGraphUpdate > PathBerserker2dSettings.InitiateUpdateInterval)
             {
                 NavGraph.Update();
+                lastGraphUpdate = Time.time;
             }
         }
 
@@ -92,6 +95,31 @@ namespace PathBerserker2d
         public static bool TryMapPoint(Vector2 position, out NavSegmentPositionPointer pointer)
         {
             return NavGraph.TryMapPoint(position, out pointer);
+        }
+
+        /// <summary>
+        /// Tries to map a point to a navigation position. The distance a point can be away is determined by searchRadius
+        /// </summary>
+        /// <param name="position">Position to map</param>
+        /// <param name="pointer">Pointer to mapped position or an invalid pointer, if mapping failed.</param>
+        /// <param name="searchRadius">Maxium search distance when trying to map.</param>
+        /// <returns>True, if mapping succeeded</returns>
+        public static bool TryMapPoint(Vector2 position, float searchRadius, out NavSegmentPositionPointer pointer)
+        {
+            return NavGraph.TryMapPoint(position, p => true, searchRadius, out pointer);
+        }
+
+        /// <summary>
+        /// Tries to map a point to a navigation position. The distance a point can be away is determined by searchRadius. Also makes sure that the point is traversable for the supplied NavAgent.
+        /// </summary>
+        /// <param name="position">Position to map</param>
+        /// <param name="pointer">Pointer to mapped position or an invalid pointer, if mapping failed.</param>
+        /// <param name="searchRadius">Maxium search distance when trying to map.</param>
+        /// <param name="agent">Maxium search distance when trying to map.</param>
+        /// <returns>True, if mapping succeeded</returns>
+        public static bool TryMapPoint(Vector2 position, float searchRadius, NavAgent agent, out NavSegmentPositionPointer pointer)
+        {
+            return NavGraph.TryMapPoint(position, p => agent.CouldBeLocatedAt(p), searchRadius, out pointer);
         }
 
         /// <summary>
@@ -155,9 +183,10 @@ namespace PathBerserker2d
         /// <param name="maxMappingDistance">Maximum distance away from position a mapping is allowed to be.</param>
         /// <param name="pointer">Mapped pointer</param>
         /// <returns>True, if successfully mapped.</returns>
+        [Obsolete("Use TryMapPoint instead")]
         public static bool TryFindClosestPointTo(Vector2 position, float maxMappingDistance, out NavSegmentPositionPointer pointer)
         {
-            return NavGraph.TryFindClosestPointTo(position, maxMappingDistance, out pointer);
+            return NavGraph.TryMapPoint(position, (p) => true, maxMappingDistance, out pointer);
         }
 
         /// <summary>
@@ -168,6 +197,12 @@ namespace PathBerserker2d
             NavGraphNodeCluster cluster = null;
             NavGraph.TryGetClusterAt(pointer, out cluster);
             return cluster;
+        }
+
+        private static int nextFreeComponentId = 1;
+        internal static int GeneratePBComponentId()
+        {
+            return nextFreeComponentId++;
         }
 
         private void StartPathfinderThreads()
