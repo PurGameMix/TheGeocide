@@ -1,0 +1,20 @@
+{
+    "name": "PathBerserker2d.Corgi",
+    "references": [
+        "GUID:6beab0bf0f222b74b868dbe4bcfa23cf",
+        "GUID:4a1cb1490dc4df8409b2580d6b44e75e",
+        "GUID:f483b8ed1e509354483048b0c7a56768"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MOREMOUNTAINS_CORGIENGINE",
+        "MOREMOUNTAINS_TOOLS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,534 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GUI_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: ae5419361c4fa574cbc76ecef8ae7be2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 289728540672
+    m_Localized: JOUER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289766289408
+    m_Localized: QUITTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289766289409
+    m_Localized: OPTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289766289410
+    m_Localized: Retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289766289411
+    m_Localized: Personnage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289766289412
+    m_Localized: Continuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289766289413
+    m_Localized: Recommencer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483712
+    m_Localized: Quitter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483713
+    m_Localized: Dans l'inventaire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483714
+    m_Localized: Ramasser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483715
+    m_Localized: Naviguer!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483716
+    m_Localized: Parler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483717
+    m_Localized: Voyager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483718
+    m_Localized: Examiner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483719
+    m_Localized: Utiliser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483720
+    m_Localized: "Enger a mis son esprit dans les volcans. La plupart du temps calme,
+      il peut tout d\xE9truire en un instant."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483721
+    m_Localized: " Z\xF4on fatigu\xE9e de parcourir le vide d\xE9cida de disperser
+      la vie dans le cosmos dans l'espoir de recr\xE9er son monde natal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483722
+    m_Localized: ' Sapiana, est la plus grande scientifique de tout les temps et
+      de tout les espaces.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483723
+    m_Localized: "Sapiana a cr\xE9\xE9 l'humanit\xE9 dans le secret, sans pr\xE9venir
+      ses compagnons. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483724
+    m_Localized: "Iskaa a \xE9t\xE9 cr\xE9er par les pouvoirs combin\xE9s des trois
+      dieux de la terre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483725
+    m_Localized: ' Stimulateurs'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483726
+    m_Localized: " Stimulateur s\xE9lectionn\xE9 pour la prochaine partie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483727
+    m_Localized: " Br\xFBlure"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483728
+    m_Localized: "Chaque attaque de m\xEAl\xE9e re\xE7ue inflige \xE0 votre adversaire
+      %%dmgValue%% de d\xE9g\xE2ts sur %%timeValue%% secondes. %%stackValue%% utilisations"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483729
+    m_Localized: " singularit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483730
+    m_Localized: " En cas de mort, brise la ligne temporelle et vous t\xE9l\xE9porte
+      %%timeValue%% secondes en arri\xE8re. %%stackValue%% utilisation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483731
+    m_Localized: " Com\xE8te"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483732
+    m_Localized: "La r\xE9cup\xE9ration de la charge est r\xE9duite de %%pcValue%%
+      %. Octroie \xE9galement un bonus de %%dmgValue%% d\xE9gats pendant 1 seconde
+      \xE0 la sortie de la charge"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483733
+    m_Localized: ' Terre'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483734
+    m_Localized: "Vous commencez votre voyage avec une armure absorbant %%stackValue%%
+      d\xE9gats"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483735
+    m_Localized: ' Big bang'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483736
+    m_Localized: "Reviens \xE0 la vie avec %%pcValue%% % de vos PV"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483737
+    m_Localized: "Surcharg\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483738
+    m_Localized: Vous commencez votre voyage avec l'arme boule de feu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483739
+    m_Localized: " M\xE9tabolisme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483740
+    m_Localized: Evolution acquises
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483741
+    m_Localized: ' Jaguar'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483742
+    m_Localized: "Attaquer par derri\xE8re inflige %%pcValue%% % de d\xE9gats suppl\xE9mentaire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483743
+    m_Localized: ' Cultiver'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483744
+    m_Localized: "Augmente la probabilit\xE9 de r\xE9cup\xE9rer une \xE2me en perdition
+      de %%pcValue%% %"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483745
+    m_Localized: ' Eucalyptus'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483746
+    m_Localized: "R\xE9duit tout vos temps de chargement de %%pcValue%% %"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483747
+    m_Localized: ' Tortue'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483748
+    m_Localized: "Vous commencez votre voyage avec %%stackValue%% PV suppl\xE9mentaires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483749
+    m_Localized: " Koko\xEF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483750
+    m_Localized: " Chaque attaque inflige %%dmgValue%% d\xE9gats sur %%timeValue%%
+      secondes. L'effet n'est pas cumulable"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483751
+    m_Localized: ' Auxine'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483752
+    m_Localized: " Vous r\xE9g\xE9n\xE9rez passivement %%pcValue%% % de vos HP maximum
+      toutes les 5 secondes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483753
+    m_Localized: "Recherche et d\xE9veloppement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483754
+    m_Localized: "Aptitudes am\xE9lior\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483755
+    m_Localized: "Le projectile se d\xE9place %%pcValue%% % plus vite et inflige
+      %%dmgValue%% de d\xE9g\xE2ts suppl\xE9mentaires."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483756
+    m_Localized: " Verrouill\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483757
+    m_Localized: " D\xE9verouiller"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483758
+    m_Localized: "S\xE9lectionner pour la prochaine partie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483759
+    m_Localized: " Am\xE9liorer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483760
+    m_Localized: "\xC2mes en perdition collect\xE9es :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483761
+    m_Localized: "S\xE9lectionn\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483762
+    m_Localized: ' Aucun'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483763
+    m_Localized: Passif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483764
+    m_Localized: Distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483765
+    m_Localized: "M\xEAl\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483766
+    m_Localized: Transformation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483767
+    m_Localized: Mouvement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483768
+    m_Localized: Bas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483769
+    m_Localized: Moyen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483770
+    m_Localized: "Elev\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483771
+    m_Localized: Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483772
+    m_Localized: Type
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483773
+    m_Localized: "D\xE9g\xE2ts"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 289770483774
+    m_Localized: Vitesse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57940519999418368
+    m_Localized: "Attaque a\xE9rienne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57940664673546240
+    m_Localized: Uppercut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114856356827803648
+    m_Localized: Ultime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117710754549510144
+    m_Localized: Sauvegardes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118834513507430400
+    m_Localized: "<sprite=0> \xC2me en perdition amass\xE9es :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118834921407688704
+    m_Localized: "Derni\xE8re partie :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118834865300484096
+    m_Localized: '<sprite=2> Progression :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118835586859184128
+    m_Localized: Choisissez un emplacement de sauvegarde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114856236837154816
+    m_Localized: "<sprite index=1 color=#986969> Lieu le plus \xE9loign\xE9 :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118839177019830272
+    m_Localized: Le hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118839197735497728
+    m_Localized: Naissance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118839210179997696
+    m_Localized: Le temple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118839250294321152
+    m_Localized: "Contact du troisi\xE8me type"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118840589346844672
+    m_Localized: Les prospecteurs d'or
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118842379899416576
+    m_Localized: Camp de DonToniel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118842361629028352
+    m_Localized: Trafiquants de drogue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 118907492903858176
+    m_Localized: NOUVELLE SAUVEGARDE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128978361596424192
+    m_Localized: Escalade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128978408497131520
+    m_Localized: Courir (Droite)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128978422388666368
+    m_Localized: Courir (Gauche)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128978434782834688
+    m_Localized: Accroupi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128980638335938560
+    m_Localized: "D\xE9faut"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128997612944273408
+    m_Localized: Sauter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128997685782556672
+    m_Localized: Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128997835129139200
+    m_Localized: "Attaque a\xE9rienne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128998066889601024
+    m_Localized: Uppercut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128998216840163328
+    m_Localized: "Corps \xE0 corps"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128998349057208320
+    m_Localized: Distance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129007221536894976
+    m_Localized: "Appuyez sur une touche pour r\xE9assigner %%ActionName%% ..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129308661367091200
+    m_Localized: "La touche %%BindingName%% est d\xE9j\xE0 utilis\xE9 pour %%ActionName%%.\nAppuyez
+      sur une touche pour r\xE9assigner %%ActionName%% ..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129313467032842240
+    m_Localized: "Int\xE9ragir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129313457696321536
+    m_Localized: Ultime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129332678253785088
+    m_Localized: CONTROLS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129333231776083968
+    m_Localized: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129352751144153088
+    m_Localized: "Param\xE8tres audio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129352715693895680
+    m_Localized: "Param\xE8tres graphiques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129365846478467072
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129365810252263424
+    m_Localized: Graphiques
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129373596482711552
+    m_Localized: Principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129373630024560640
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129373733498040320
+    m_Localized: Sons ambiants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129374104761053184
+    m_Localized: Effets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129736216851165184
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129736296555524096
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129736393997594624
+    m_Localized: "Luminosit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129736526327885824
+    m_Localized: "Tr\xE8s bas : Je joue sur une calculette"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129744604695801856
+    m_Localized: 'Bas: Il faut acheter un nouveau PC'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129744993583280128
+    m_Localized: "Moyen: Tout les syst\xE8mes OK"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129745259971915776
+    m_Localized: 'Haut: Je peux miner de la cryptomonnaie'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129745322987139072
+    m_Localized: "Ultra: Pr\xEAt pour le saut en hyper-espace"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129748204213940224
+    m_Localized: Performances
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132976567137251328
+    m_Localized: Affaler la voile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 132976589337702400
+    m_Localized: Hisser la voile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143095218121125888
+    m_Localized: Appuyer sur %%key%% pour passer ...
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

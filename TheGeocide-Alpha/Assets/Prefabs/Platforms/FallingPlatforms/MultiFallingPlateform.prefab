@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6782032009991544451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6782032009991544449}
+  - component: {fileID: 6782032009991544450}
+  m_Layer: 0
+  m_Name: MultiFallingPlateform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6782032009991544449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6782032009991544451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6782032009991544450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6782032009991544451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3d6bf33d5938f4eb593043d40fed06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsChained: 0
+  BreakTime: 0
+  PlatformLength: 0
+  _plaftformPalette: {fileID: 0}
+  _plaftformPrefab: {fileID: 4110959792894082103, guid: b46d7a2ba7dfa7747b6d2c7379160fe3, type: 3}
+  _plaftformGfxPrefab: {fileID: 8506214045023851813, guid: a27cdf6b9aa1c0945a5d7a9698a44db3, type: 3}
+  ConnectTime: 0
+  _chainedPlaftformPrefab: {fileID: 4539952143753599426, guid: df8588ac6350d0e4f84f9bcc9ee75c1f, type: 3}

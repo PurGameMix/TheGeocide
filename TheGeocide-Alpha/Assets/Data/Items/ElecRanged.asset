@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7036854242174b80b302fc8ff6385, type: 3}
+  m_Name: ElecRanged
+  m_EditorClassIdentifier: 
+  NameKey: SO_ITEM_ELECRANGED_NAME
+  DescriptionKey: SO_ITEM_ELECRANGED_NAME
+  IsDefault: 0
+  CountDown: 3
+  MaxCastTime: 4
+  MinCastTime: 1
+  Damage: 100
+  EffectType: 10
+  EffectProbability: 100
+  Level: 0
+  _spriteLibrary: {fileID: 11400000, guid: 06f945969a71e834b96720be557cb99b, type: 2}
+  Type: 1
+  SetType: 3
+  SpellType: 0
+  SpellOrigin: 5
+  IsWorldInstance: 0
+  IsDashingSpell: 0
+  Capacities: []
+  PlayerBonesChanges: []
+  InventorySprite: {fileID: 21300000, guid: 9dc58de9393cdec49b1b5509b76cdce0, type: 3}
+  InGameSprite: {fileID: 21300000, guid: db50c11e923badb40b92767581971b0d, type: 3}
+  OverrideAnimationList: []
+  OverrideSoundList: []
+  PrimaryEffectsPrefab: {fileID: 309139536269719480, guid: 788b47589227cc341bb839294b03abbb, type: 3}
+  ProjectilePrefab: {fileID: 0}
+  CastingUIPrefab: {fileID: 477107623120881955, guid: 6bcb67e8c51c0044e965f85272c9ee9c, type: 3}
+  CastingUIType: 1

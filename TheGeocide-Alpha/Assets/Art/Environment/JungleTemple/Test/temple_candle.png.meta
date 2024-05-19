@@ -1,0 +1,323 @@
+fileFormatVersion: 2
+guid: f5aa6a39041f38d429796a0b283120ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6707971061092490973
+    second: temple_candle_0
+  - first:
+      213: 4328383230309102969
+    second: temple_candle_1
+  - first:
+      213: -1903023453763396930
+    second: temple_candle_2
+  - first:
+      213: -1824288755301933041
+    second: temple_candle_3
+  - first:
+      213: -6670118229193539355
+    second: temple_candle_4
+  - first:
+      213: -6458500703225075339
+    second: temple_candle_5
+  - first:
+      213: 1840098329695918709
+    second: temple_candle_6
+  - first:
+      213: -750434193986852202
+    second: temple_candle_7
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: temple_candle_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 131
+        width: 23
+        height: 99
+      alignment: 9
+      pivot: {x: 0.45947978, y: 0.7017381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3216bfb3cdf78e2a0800000000000000
+      internalID: -6707971061092490973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temple_candle_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 131
+        width: 24
+        height: 93
+      alignment: 9
+      pivot: {x: 0.4829731, y: 0.7464611}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975f45e7d91811c30800000000000000
+      internalID: 4328383230309102969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temple_candle_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 130
+        width: 25
+        height: 95
+      alignment: 9
+      pivot: {x: 0.45832336, y: 0.7420847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba123f504a1795e0800000000000000
+      internalID: -1903023453763396930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temple_candle_3
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 130
+        width: 25
+        height: 94
+      alignment: 9
+      pivot: {x: 0.4621869, y: 0.7495624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f002d74ea03dea6e0800000000000000
+      internalID: -1824288755301933041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temple_candle_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 15
+        width: 25
+        height: 100
+      alignment: 9
+      pivot: {x: 0.42071044, y: 0.70415324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0cf037fcafe63a0800000000000000
+      internalID: -6670118229193539355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temple_candle_5
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 15
+        width: 32
+        height: 106
+      alignment: 9
+      pivot: {x: 0.60921407, y: 0.6648518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579a8aa34dbce56a0800000000000000
+      internalID: -6458500703225075339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temple_candle_6
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 15
+        width: 24
+        height: 101
+      alignment: 9
+      pivot: {x: 0.47931352, y: 0.6969146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a905d7ea7598910800000000000000
+      internalID: 1840098329695918709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: temple_candle_7
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 13
+        width: 26
+        height: 105
+      alignment: 9
+      pivot: {x: 0.44332415, y: 0.68928885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a6b18931ce595f0800000000000000
+      internalID: -750434193986852202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      temple_candle_0: -6707971061092490973
+      temple_candle_1: 4328383230309102969
+      temple_candle_2: -1903023453763396930
+      temple_candle_3: -1824288755301933041
+      temple_candle_4: -6670118229193539355
+      temple_candle_5: -6458500703225075339
+      temple_candle_6: 1840098329695918709
+      temple_candle_7: -750434193986852202
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

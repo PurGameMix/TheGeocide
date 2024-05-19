@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767187af6b1e543409994a871c180cb0, type: 3}
+  m_Name: PlayerDead
+  m_EditorClassIdentifier: 
+  Name: PlayerDead
+  Type: 3
+  prefabList:
+  - Prefab: {fileID: 1953248280387807398, guid: 46cac5fafa2253a4792501d8b49949da, type: 3}
+    Feeling: 0
+    Weight: 0.5
+  - Prefab: {fileID: 2604916691411829605, guid: 830bc2e26604fd949851f4dfbbf99f2f, type: 3}
+    Feeling: 1
+    Weight: 1
+  - Prefab: {fileID: 2835186286813052477, guid: b05473f17fee0d946b49a37613e73138, type: 3}
+    Feeling: 3
+    Weight: 0.5
+  - Prefab: {fileID: 3315271041710380646, guid: e10836752d02215408902d3449f80101, type: 3}
+    Feeling: 4
+    Weight: 1

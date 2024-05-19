@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7036854242174b80b302fc8ff6385, type: 3}
+  m_Name: ElecUppercut
+  m_EditorClassIdentifier: 
+  NameKey: SO_ITEM_ELECUPPERCUT_NAME
+  DescriptionKey: SO_ITEM_ELECUPPERCUT_DESC
+  IsDefault: 0
+  CountDown: 1
+  MaxCastTime: 0
+  MinCastTime: 0
+  Damage: 10
+  EffectType: 10
+  EffectProbability: 100
+  Level: 1
+  _spriteLibrary: {fileID: 11400000, guid: 06f945969a71e834b96720be557cb99b, type: 2}
+  Type: 3
+  SetType: 3
+  SpellType: 2
+  SpellOrigin: 0
+  IsWorldInstance: 1
+  IsDashingSpell: 1
+  Capacities: []
+  PlayerBonesChanges: []
+  InventorySprite: {fileID: 21300000, guid: 541065dc35b30b1488c16c93b060ff29, type: 3}
+  InGameSprite: {fileID: 21300000, guid: 7ba93cf3665e4a3459ad228fb5b18592, type: 3}
+  OverrideAnimationList: []
+  OverrideSoundList: []
+  PrimaryEffectsPrefab: {fileID: 7635917698471848188, guid: aa0579dc7d88bae4fab5be342bf936f4, type: 3}
+  ProjectilePrefab: {fileID: 0}
+  CastingUIPrefab: {fileID: 0}
+  CastingUIType: 0

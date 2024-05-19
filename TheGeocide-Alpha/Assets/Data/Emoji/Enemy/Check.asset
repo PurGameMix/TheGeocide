@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767187af6b1e543409994a871c180cb0, type: 3}
+  m_Name: Check
+  m_EditorClassIdentifier: 
+  Name: Check
+  Type: 2
+  prefabList:
+  - Prefab: {fileID: 8363316304035434347, guid: d908ef931f80a4742b82e77096939bbb, type: 3}
+    Feeling: 0
+    Weight: 50
+  - Prefab: {fileID: 6541558604468218731, guid: 54db4ffb44defc74a9f5c242ca73bd5d, type: 3}
+    Feeling: 0
+    Weight: 50

@@ -1,0 +1,418 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Dialog_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: bb54896bd0a24c24f9d17815ab9c43eb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 23016943616
+    m_Localized: We have nothing more to say to each other at the moment. Awkward...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23042109440
+    m_Localized: Hello young Iskaa ! You finally awake ! How do you feel?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23042109441
+    m_Localized: Iskaa is my name... I feel dazed and confused Who are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303744
+    m_Localized: I am your father! Enger, creator of this world and of your flesh
+      too. Hahaha!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303745
+    m_Localized: Together we will bring down fire and lightning on this world... 
+      You'll see we'll have a lot of fun!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303746
+    m_Localized: "Hello my son, my name is Z\xF4on, goddess of life and death."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303747
+    m_Localized: Let me guess, we going to bring down fire and lightning on this
+      world together?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303748
+    m_Localized: Ho my son... Life must be protected. Death must be given only to
+      survive.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303749
+    m_Localized: Together we will restore the balance of the great cycle of life!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303750
+    m_Localized: You are my mom too...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303751
+    m_Localized: You are Sapiana...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303752
+    m_Localized: How can I know this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303753
+    m_Localized: Yes Iskaa I am Sapiana goddess of spirit. I have created the spirit
+      of the animals and have given them thirst for love and knowledge.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303754
+    m_Localized: Thanks to me you can communicate with any living being but you still
+      have a lot to learn about this world. Omniscience is a burden that only I can
+      bear...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303755
+    m_Localized: Hmm... I see, so what are you expected from me mother?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303756
+    m_Localized: We have created this world in order to extend our influence over
+      the void. However, even the gods can make mistakes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303757
+    m_Localized: We have overestimated the power of humanity and it risks destroying
+      millions of years of work if we do not intervene
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303758
+    m_Localized: Why not do it yourself?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303759
+    m_Localized: 'Haha the impudence of youth... My son, here is your first lesson:
+      you don''t use a sledgehammer to kill a fly'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303760
+    m_Localized: What is a sledgehammer? And a fly?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303761
+    m_Localized: Go my son! Discover the world, lear, love, enjoy the gift we have
+      given you and fulfill your destiny.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303762
+    m_Localized: Ok enough speaking, I will send you to your first mission, are you
+      ready?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303763
+    m_Localized: Something seems to have been buried here...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303764
+    m_Localized: Nothing happens when I try to move it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303765
+    m_Localized: Ok lets go!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303766
+    m_Localized: Wait ! I have some questions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303767
+    m_Localized: What a wimp!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303768
+    m_Localized: What is this place?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303769
+    m_Localized: What should I do?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303770
+    m_Localized: Ok lets go!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303771
+    m_Localized: Well, this is your home! We are under the world tree, that's where
+      we have been resting all these years.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498048
+    m_Localized: "The World Tree is the first tree created by Z\xF4on and is located
+      in the center of the largest forest on earth"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498049
+    m_Localized: Humans are threatening our habitat, if they are looking for trouble
+      they will find it! Take care of them!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498050
+    m_Localized: Go through this tunnel to get to the surface, good luck son!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498051
+    m_Localized: Completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342115945721856
+    m_Localized: 'Hahaha what a fall! Welcome in the real world! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342360444284928
+    m_Localized: I hurt all over, I'm cold and i can't see shit. And who are you
+      again?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342382304997376
+    m_Localized: It's me Enger, you are really blind indeed. We can communicate thanks
+      to Sapiana. Technology is beautiful!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342400466333696
+    m_Localized: Sorry if I don't share your enthusiasm. I'm in the mood to break
+      things right now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 343978065702912
+    m_Localized: Good timing, I think you'll have to break through the wall on the
+      right. It looks fragile.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347785172529152
+    m_Localized: Press <sprite=0> to weaken the wall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349815039504384
+    m_Localized: Watch out! If you fall in this hole I won't be able to help you.
+      Press <sprite=0> to jump.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351417926332416
+    m_Localized: Hmm here I think with a dash it will be enough. Press <sprite=0>
+      to dash.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353080087064576
+    m_Localized: See that vine over there? If you press <sprite=0> with the right
+      timing you should be able to grab onto it. Swing from left to right to get
+      to the other side.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 354509270986752
+    m_Localized: You're almost out of the woods. These platforms don't look very
+      sturdy, in my opinion it's best to get up there as soon as possible. Use everything
+      I taught you to get out of here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1061887842889728
+    m_Localized: I forgot to tell you that you can also climb some surfaces, it is
+      ....
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062299358638080
+    m_Localized: Yes, yes, I am aware of that...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062633229430784
+    m_Localized: If you take it like that, you're on your own now. See ya!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1063133794447360
+    m_Localized: A whole world of endless possibilities! If I have to choose I think
+      I'll keep going to the right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13341010560724992
+    m_Localized: Hello, what's up? You're doing pretty good so far. Just to warn
+      you that this building is the remnant of an ancient civilization but the torches
+      are lit. Obviously something going wrong here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13341897811210240
+    m_Localized: I would be careful if I were you. In the movies it's often places
+      with death traps in every direction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13342492861313024
+    m_Localized: 'It can''t be worse than in the jungle and then, if they let this
+      access it''s probably to welcome their savior! Aka me! What is a movie again? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13347757744631808
+    m_Localized: I'm not going to explain to you every time that you don't know something
+      or we'll never finish. Calm your ego down, these people worshipped me back
+      then and I love destruction so watch out, understand?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18854357901160448
+    m_Localized: Completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18854525572657152
+    m_Localized: Completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134803464896819200
+    m_Localized: Just as the prophecy said! The chosen one has come down to earth
+      to protect our village.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134803873161981952
+    m_Localized: Wow! Humans! So they're the ones making the mess? What do I do,
+      kill them?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134804559396253696
+    m_Localized: Don't talk nonsense Triple nozzles! These people worship me, they
+      can't be bad. Be polite and talk to them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134805380867469312
+    m_Localized: Hello... What's up?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134806416504041472
+    m_Localized: Oh great protector, the disease is eating away at our territory
+      further east. I beg you, bring down divine justice on this scourge and cure
+      the land of this pernicious evil.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134808185808269312
+    m_Localized: Already a track, let's go! We'll get this done in no time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134808632983990272
+    m_Localized: In the name of Enger, I promise you that all this will be settled
+      very quickly!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134809347584339968
+    m_Localized: Thank you protector. The river is the last rampart between them
+      and us. Take one of our canoes. When you arrive at the waterfall, justice can
+      be done!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142352405527965696
+    m_Localized: What the fuck!? Who are you? Why are you on our territory and above
+      all, what the fuck are you wearing?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142354000210735104
+    m_Localized: Greeting Human, I am the fucking chosen one and I travel in this
+      fucking region to deliver divine justice. Would you be so kind as to tell me
+      the geographical location of the people responsible for this plant suffering?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142356198487404544
+    m_Localized: Either you're completely crazy or you're making fun of me, either
+      way you're dead!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142357999454433280
+    m_Localized: This human doesn't look convenient. Maybe my use of "whore" was
+      incorrect? In any case he comes towards me what do I do?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142359086785802240
+    m_Localized: No, it was perfect, finally some action! Show him what you can do!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142360560248991744
+    m_Localized: What I am capable of .... ok... so...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142361396035366912
+    m_Localized: Please, this is a misunderstanding, I'm sure we can work something
+      out!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142361413454311424
+    m_Localized: Suffer my wrath, insect!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142362462567182336
+    m_Localized: Die!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145624290491543552
+    m_Localized: There's something floating over his dead body.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145624713495490560
+    m_Localized: Yes, it is his soul. Sometimes, the souls of the living refuse to
+      leave their envelope. Very powerful feelings allow them to resist the great
+      call. They are thus condemned to wander between two worlds. We call them unfortunated
+      souls.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145627594948784128
+    m_Localized: It's super sad story, and can't we help them find their way back?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145628125335302144
+    m_Localized: Unfortunately not... Collect them and come back to me, I'll know
+      what to do with them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145628968100999168
+    m_Localized: Another spy who comes to snoop where he should not. Come out you
+      bastard!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164430320516116480
+    m_Localized: 'Go to hell ! You go ! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164432998449197056
+    m_Localized: 'What?! We don''t even try to talk to them anymore? '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164433190346993664
+    m_Localized: Look what they're doing to the jungle! It's impossible to reason
+      with these parasites.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170608758268538880
+    m_Localized: Sir! Yes sir!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170602696438099968
+    m_Localized: Chief! A suspicious individual has been spotted on the outskirts
+      of the camp.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170605130728255488
+    m_Localized: No one ventures into Don territory with impunity! Shoot him!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170606003554529280
+    m_Localized: But chief... It could be an explorer crossing the Amazon from west
+      to east.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170606702350741504
+    m_Localized: 'Impossible Mike would have warned me. Execute my order, soldier! '
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

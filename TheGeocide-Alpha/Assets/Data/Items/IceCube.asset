@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7036854242174b80b302fc8ff6385, type: 3}
+  m_Name: IceCube
+  m_EditorClassIdentifier: 
+  NameKey: SO_ITEM_ICEUPPERCUT_NAME
+  DescriptionKey: SO_ITEM_ICEUPPERCUT_DESC
+  IsDefault: 0
+  CountDown: 2
+  MaxCastTime: 0
+  MinCastTime: 0
+  Damage: 0
+  EffectType: 7
+  EffectProbability: 100
+  Level: 1
+  _spriteLibrary: {fileID: 11400000, guid: 06f945969a71e834b96720be557cb99b, type: 2}
+  Type: 3
+  SetType: 2
+  SpellType: 3
+  SpellOrigin: 2
+  IsWorldInstance: 1
+  IsDashingSpell: 0
+  Capacities: []
+  PlayerBonesChanges: []
+  InventorySprite: {fileID: 21300000, guid: aa46e073141f4614e8aea940701a8d6c, type: 3}
+  InGameSprite: {fileID: 21300000, guid: 8a54ee157bc445b4a83a4f706d90619b, type: 3}
+  OverrideAnimationList:
+  - OverridedAnimationName: Player_Uppercut_Body
+    AnimationClip: {fileID: 7400000, guid: 27066f181cae2d049bce074657ff5f00, type: 2}
+  - OverridedAnimationName: Player_Uppercut_Legs
+    AnimationClip: {fileID: 7400000, guid: 0da900659aa793043a77a6d95b540a84, type: 2}
+  OverrideSoundList: []
+  PrimaryEffectsPrefab: {fileID: 6181805618067219702, guid: 109cdc600fa2d924c8f328e79d7d9226, type: 3}
+  ProjectilePrefab: {fileID: 0}
+  CastingUIPrefab: {fileID: 0}
+  CastingUIType: 0

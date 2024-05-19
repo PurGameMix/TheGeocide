@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7036854242174b80b302fc8ff6385, type: 3}
+  m_Name: ElcUltimate
+  m_EditorClassIdentifier: 
+  NameKey: SO_ITEM_ELECULTIMATE_NAME
+  DescriptionKey: SO_ITEM_ELECULTIMATE_DESC
+  IsDefault: 0
+  CountDown: 60
+  MaxCastTime: 0
+  MinCastTime: 0
+  Damage: 50
+  EffectType: 10
+  EffectProbability: 100
+  Level: 1
+  _spriteLibrary: {fileID: 11400000, guid: 06f945969a71e834b96720be557cb99b, type: 2}
+  Type: 4
+  SetType: 3
+  SpellType: 4
+  SpellOrigin: 1
+  IsWorldInstance: 0
+  IsDashingSpell: 0
+  Capacities: []
+  PlayerBonesChanges: []
+  InventorySprite: {fileID: 21300000, guid: 7ec70455385d0fc46b4b5c658605dd36, type: 3}
+  InGameSprite: {fileID: 21300000, guid: 0854b2e97c866ed418eac9d037619387, type: 3}
+  OverrideAnimationList: []
+  OverrideSoundList: []
+  PrimaryEffectsPrefab: {fileID: 4541716004064148623, guid: 61a4984dc95ede54eb9b3743774fbfd1, type: 3}
+  ProjectilePrefab: {fileID: 0}
+  CastingUIPrefab: {fileID: 0}
+  CastingUIType: 0

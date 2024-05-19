@@ -1,0 +1,368 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dialog Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Dialog
+  m_TableCollectionNameGuidString: bb54896bd0a24c24f9d17815ab9c43eb
+  m_Entries:
+  - m_Id: 23016943616
+    m_Key: DIA_GLOBAL_NONE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23042109440
+    m_Key: DIA_HQ_1_ELEMGOD_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23042109441
+    m_Key: DIA_HQ_1_ELEMGOD_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303744
+    m_Key: DIA_HQ_1_ELEMGOD_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303745
+    m_Key: DIA_HQ_1_ELEMGOD_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303746
+    m_Key: DIA_HQ_1_LIFEGOD_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303747
+    m_Key: DIA_HQ_1_LIFEGOD_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303748
+    m_Key: DIA_HQ_1_LIFEGOD_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303749
+    m_Key: DIA_HQ_1_LIFEGOD_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303750
+    m_Key: DIA_HQ_1_SPIRIGOD_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303751
+    m_Key: DIA_HQ_1_SPIRIGOD_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303760
+    m_Key: DIA_HQ_1_SPIRIGOD_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303761
+    m_Key: DIA_HQ_1_SPIRIGOD_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303752
+    m_Key: DIA_HQ_1_SPIRIGOD_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303753
+    m_Key: DIA_HQ_1_SPIRIGOD_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303754
+    m_Key: DIA_HQ_1_SPIRIGOD_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303755
+    m_Key: DIA_HQ_1_SPIRIGOD_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303756
+    m_Key: DIA_HQ_1_SPIRIGOD_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303757
+    m_Key: DIA_HQ_1_SPIRIGOD_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303758
+    m_Key: DIA_HQ_1_SPIRIGOD_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303759
+    m_Key: DIA_HQ_1_SPIRIGOD_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303763
+    m_Key: DIA_HQ_1_TOTEM_BURRIED_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303764
+    m_Key: DIA_HQ_1_TOTEM_BURRIED_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303762
+    m_Key: DIA_HQ_2_ELEMGOD_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303765
+    m_Key: DIA_HQ_2_ELEMGOD_1_ch1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303766
+    m_Key: DIA_HQ_2_ELEMGOD_1_ch2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303767
+    m_Key: DIA_HQ_2_ELEMGOD_2_as12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303768
+    m_Key: DIA_HQ_2_ELEMGOD_2_ch1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303769
+    m_Key: DIA_HQ_2_ELEMGOD_2_ch2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303770
+    m_Key: DIA_HQ_2_ELEMGOD_2_ch3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303771
+    m_Key: DIA_HQ_2_ELEMGOD_3_as21_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498048
+    m_Key: DIA_HQ_2_ELEMGOD_3_as21_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498049
+    m_Key: DIA_HQ_2_ELEMGOD_4_as22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498050
+    m_Key: DIA_HQ_2_ELEMGOD_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498051
+    m_Key: DIA_HQ_ELEMGOD_BODE_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18854357901160448
+    m_Key: DIA_HQ_LIFEGOD_BODE_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18854525572657152
+    m_Key: DIA_HQ_SPIRITGOD_BODE_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353080087064576
+    m_Key: DIA_JNG_P1LVL1_HELP_CLIMB_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351417926332416
+    m_Key: DIA_JNG_P1LVL1_HELP_DASH_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1061887842889728
+    m_Key: DIA_JNG_P1LVL1_HELP_END_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062299358638080
+    m_Key: DIA_JNG_P1LVL1_HELP_END_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062633229430784
+    m_Key: DIA_JNG_P1LVL1_HELP_END_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1063133794447360
+    m_Key: DIA_JNG_P1LVL1_HELP_END_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 354509270986752
+    m_Key: DIA_JNG_P1LVL1_HELP_FALLPLAT_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349815039504384
+    m_Key: DIA_JNG_P1LVL1_HELP_JUMP_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347785172529152
+    m_Key: DIA_JNG_P1LVL1_HELP_PUNCH_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342115945721856
+    m_Key: DIA_JNG_P1LVL1_INTRO_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342360444284928
+    m_Key: DIA_JNG_P1LVL1_INTRO_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342382304997376
+    m_Key: DIA_JNG_P1LVL1_INTRO_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342400466333696
+    m_Key: DIA_JNG_P1LVL1_INTRO_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 343978065702912
+    m_Key: DIA_JNG_P1LVL1_INTRO_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13341010560724992
+    m_Key: DIA_JNG_P1LVL2_HELP_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13341897811210240
+    m_Key: DIA_JNG_P1LVL2_HELP_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13342492861313024
+    m_Key: DIA_JNG_P1LVL2_HELP_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13347757744631808
+    m_Key: DIA_JNG_P1LVL2_HELP_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134803464896819200
+    m_Key: DIA_P1LVL3_THECHOSEN_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134803873161981952
+    m_Key: DIA_P1LVL3_THECHOSEN_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134804559396253696
+    m_Key: DIA_P1LVL3_THECHOSEN_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134805380867469312
+    m_Key: DIA_P1LVL3_PROTECTION_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134806416504041472
+    m_Key: DIA_P1LVL3_PROTECTION_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134808185808269312
+    m_Key: DIA_P1LVL3_PROTECTION_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134808632983990272
+    m_Key: DIA_P1LVL3_PROTECTION_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134809347584339968
+    m_Key: DIA_P1LVL3_PROTECTION_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142352405527965696
+    m_Key: DIA_P1LVL3_FIRSTENCOUTNER_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142354000210735104
+    m_Key: DIA_P1LVL3_FIRSTENCOUTNER_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142356198487404544
+    m_Key: DIA_P1LVL3_FIRSTENCOUTNER_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142357999454433280
+    m_Key: DIA_P1LVL3_FIRSTCOMBAT_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142359086785802240
+    m_Key: DIA_P1LVL3_FIRSTCOMBAT_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142360560248991744
+    m_Key: DIA_P1LVL3_FIRSTCOMBAT_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142361396035366912
+    m_Key: DIA_P1LVL3_FIRSTCOMBAT_2_ch1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142361413454311424
+    m_Key: DIA_P1LVL3_FIRSTCOMBAT_2_ch2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142362462567182336
+    m_Key: DIA_P1LVL3_FIRSTCOMBAT_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145624290491543552
+    m_Key: DIA_P1LVL3_ENDING_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145624713495490560
+    m_Key: DIA_P1LVL3_ENDING_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145627594948784128
+    m_Key: DIA_P1LVL3_ENDING_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145628125335302144
+    m_Key: DIA_P1LVL3_ENDING_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145628968100999168
+    m_Key: DIA_P1LVL4_TANK_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164430320516116480
+    m_Key: DIA_P1LVL4_TANK_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164432998449197056
+    m_Key: DIA_P1LVL4_TANK_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164433190346993664
+    m_Key: DIA_P1LVL4_TANK_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170602696438099968
+    m_Key: DIA_P1LVL5_BEGIN_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170605130728255488
+    m_Key: DIA_P1LVL5_DON_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170606003554529280
+    m_Key: DIA_P1LVL5_DON_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170606702350741504
+    m_Key: DIA_P1LVL5_DON_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170608758268538880
+    m_Key: DIA_P1LVL5_DON_3
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 0
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1645544800204

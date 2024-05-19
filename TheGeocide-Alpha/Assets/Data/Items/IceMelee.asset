@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7036854242174b80b302fc8ff6385, type: 3}
+  m_Name: IceMelee
+  m_EditorClassIdentifier: 
+  NameKey: SO_ITEM_ICEMELEE_NAME
+  DescriptionKey: SO_ITEM_ICEMELEE_DESC
+  IsDefault: 0
+  CountDown: 1
+  MaxCastTime: 0
+  MinCastTime: 0
+  Damage: 5
+  EffectType: 7
+  EffectProbability: 100
+  Level: 1
+  _spriteLibrary: {fileID: 11400000, guid: 06f945969a71e834b96720be557cb99b, type: 2}
+  Type: 0
+  SetType: 2
+  SpellType: 1
+  SpellOrigin: 4
+  IsWorldInstance: 0
+  IsDashingSpell: 0
+  Capacities: []
+  PlayerBonesChanges: []
+  InventorySprite: {fileID: 21300000, guid: 9c2eacd3ca83344418998a469e59b8b7, type: 3}
+  InGameSprite: {fileID: 21300000, guid: 7af3b3ae71d79a449a35fe152d5ecc35, type: 3}
+  OverrideAnimationList: []
+  OverrideSoundList: []
+  PrimaryEffectsPrefab: {fileID: 8299551496049910197, guid: 2360cf8e13ce2194b8b88d8f40ed0b65, type: 3}
+  ProjectilePrefab: {fileID: 0}
+  CastingUIPrefab: {fileID: 0}
+  CastingUIType: 0

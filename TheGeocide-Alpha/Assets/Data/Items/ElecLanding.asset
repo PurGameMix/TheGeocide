@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7036854242174b80b302fc8ff6385, type: 3}
+  m_Name: ElecLanding
+  m_EditorClassIdentifier: 
+  NameKey: SO_ITEM_ELECLANDING_NAME
+  DescriptionKey: SO_ITEM_ELECLANDING_DESC
+  IsDefault: 0
+  CountDown: 3
+  MaxCastTime: 0
+  MinCastTime: 0
+  Damage: 50
+  EffectType: 10
+  EffectProbability: 100
+  Level: 1
+  _spriteLibrary: {fileID: 11400000, guid: 06f945969a71e834b96720be557cb99b, type: 2}
+  Type: 2
+  SetType: 3
+  SpellType: 3
+  SpellOrigin: 3
+  IsWorldInstance: 1
+  IsDashingSpell: 0
+  Capacities: []
+  PlayerBonesChanges: []
+  InventorySprite: {fileID: 21300000, guid: 03d4545d118e4d445aacb2034b668a7e, type: 3}
+  InGameSprite: {fileID: 21300000, guid: d42e7350ca0889e44888c988fa2b2b68, type: 3}
+  OverrideAnimationList:
+  - OverridedAnimationName: Player_Landing_Body
+    AnimationClip: {fileID: 7400000, guid: 62b6db38d8e34364cb889f2317902ffb, type: 2}
+  - OverridedAnimationName: Player_Landing_Legs
+    AnimationClip: {fileID: 7400000, guid: 8598b4b0709168e4a92edde6a76fb215, type: 2}
+  OverrideSoundList: []
+  PrimaryEffectsPrefab: {fileID: 60097210950106307, guid: 826f5621af2af764fb031469c21eb296, type: 3}
+  ProjectilePrefab: {fileID: 0}
+  CastingUIPrefab: {fileID: 0}
+  CastingUIType: 0

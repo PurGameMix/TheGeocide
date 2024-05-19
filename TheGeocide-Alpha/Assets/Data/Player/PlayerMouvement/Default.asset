@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2febb9d24de8e4e9065350250c3837, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  gravityScale: 2.5
+  waterGravityScale: 0.8
+  fallGravityMult: 1.35
+  quickFallGravityMult: 2.2
+  fallSmokeLimit: 10
+  fallDamageLimit: 20
+  fallDyingLimit: 25
+  fallDamageCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.0640465
+      outSlope: 1.0640465
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.27223366
+    - serializedVersion: 3
+      time: 0.4999841
+      value: 0.2571767
+      inSlope: 0.24597979
+      outSlope: 0.24597979
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.686217
+      value: 0.28701526
+      inSlope: 0.2582893
+      outSlope: 0.2582893
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22672069
+      outWeight: 0.07845764
+    - serializedVersion: 3
+      time: 0.9
+      value: 1
+      inSlope: -0.027790708
+      outSlope: -0.027790708
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.264576
+      outWeight: 0.32927296
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  dragAmount: 0.22
+  frictionAmount: 0.55
+  coyoteTime: 0.1
+  runMaxSpeed: 9.5
+  runAccel: 9.3
+  runDeccel: 15
+  backwardCastSpeed: 5
+  forwardCastSpeed: 7
+  crouchMaxSpeed: 3
+  crouchAccel: 1
+  crouchDeccel: 5
+  swimMaxSpeed: 4.5
+  swimAccel: 3
+  swimDeccel: 5
+  accelInAir: 0.65
+  deccelInAir: 0.65
+  accelPower: 1.05
+  stopPower: 1.23
+  turnPower: 1.13
+  jumpForce: 14
+  jumpCutMultiplier: 0.5
+  jumpBufferTime: 0.08
+  wallJumpForce: {x: 5, y: 12}
+  wallJumpRunLerp: 1
+  wallJumpTime: 0.5
+  climbMaxSpeed: 7
+  climbAccel: 6.2
+  climbDeccel: 15
+  edgeBeginOffset: {x: 0, y: -0.101}
+  edgeEndOffset: {x: 0.6441, y: 1.343}
+  slopeMaxSpeed: 9
+  slideAccel: 5
+  slidePower: 0.7
+  dashAmount: 1
+  dashSpeed: 17
+  dashAttackTime: 0.14
+  landingAttackTime: 0.3
+  dashAttackDragAmount: 0.22
+  dashEndTime: 0.1
+  landingEndTime: 0.2
+  dashUpEndMult: 0.6
+  dashEndRunLerp: 0.3
+  dashBufferTime: 0.05
+  StandOffset: {x: 0.05, y: 0.82}
+  StandSize: {x: 0.25, y: 1.55}
+  CrouchOffset: {x: 0.05, y: 0.44}
+  CrouchSize: {x: 0.25, y: 0.8}
+  doKeepRunMomentum: 0
+  doTurnOnWallJump: 0

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8acbaff09fed92489f5bf544e8ccc53, type: 3}
+  m_Name: BoDe
+  m_EditorClassIdentifier: 
+  FirstNode: {fileID: 11400000, guid: 52e63ec44a20a464c8c9e45cfbd33711, type: 2}
+  Owner: {fileID: 11400000, guid: 31e73f5d858a5e54297616711a29777d, type: 2}
+  IsLocked: 1
+  IsLoop: 0
+  IsDefault: 0
+  ReadUnlocks: []

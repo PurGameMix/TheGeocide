@@ -1,0 +1,433 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Dialog_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: bb54896bd0a24c24f9d17815ab9c43eb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 23016943616
+    m_Localized: "Nous n'avons rien de plus \xE0 nous dire pour le moment. G\xEAnant
+      ..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23042109440
+    m_Localized: "Bonjour jeune Iskaa ! Tu es enfin r\xE9veill\xE9 ! Comment te sens-tu
+      ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23042109441
+    m_Localized: " Iskaa est mon nom... Je me sens \xE9tourdi et confus. Qui \xEAtes-vous
+      ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303744
+    m_Localized: "Je suis ton p\xE8re ! Enger, cr\xE9ateur de ce monde et de ta chair
+      aussi. Hahaha !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303745
+    m_Localized: Ensemble nous allons abattre le feu et la foudre sur ce monde... 
+      Tu vas voir on va bien se marrer !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303746
+    m_Localized: "Bonjour mon fils, je m'appelle Z\xF4on, d\xE9esse de la vie et
+      de la mort."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303747
+    m_Localized: Laissez moi devinez, on va faire tomber le feu et la foudre sur
+      ce monde ensemble ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303748
+    m_Localized: " Ho mon fils... La vie doit \xEAtre prot\xE9g\xE9. La mort doit
+      \xEAtre donner seulement pour survivre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303749
+    m_Localized: "Ensemble nous r\xE9tablirons l'\xE9quilibre du grand cycle de la
+      vie!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303750
+    m_Localized: "Vous \xEAtes ma m\xE8re..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303751
+    m_Localized: "Vous \xEAtes Sapiana..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303752
+    m_Localized: "Comment je sais \xE7a moi?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303753
+    m_Localized: " Oui Iskaa je suis Sapiana diesse de l'esprit. J'ai cr\xE9er l'esprit
+      des animaux et leurs aient donner soif d'amour et de savoir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303754
+    m_Localized: " Gr\xE2ce \xE0 moi tu peux communiquer avec tout \xEAtre vivant
+      mais tu as encore beaucoup \xE0 apprendre de ce monde. L'omniscience est un
+      fardeau que seul moi peut endurer..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303755
+    m_Localized: " Hmm... Je vois, qu'attendez vous de moi m\xE8re?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303756
+    m_Localized: "Nous avons cr\xE9er ce monde afin d'\xE9tendre notre influence
+      sur le vide. Cependant, m\xEAme les dieux peuvent faire des erreurs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303757
+    m_Localized: " Nous avons sur-estim\xE9 le pouvoir de l'Humanit\xE9 et elle risque
+      de d\xE9truire des millions d'ann\xE9es de travails si nous n'intervenons pas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303758
+    m_Localized: " Pourquoi ne pas le faire vous m\xEAme?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303759
+    m_Localized: " Haha l'impudence de la jeunesse... Mon fils, voici ta premi\xE8re
+      le\xE7on : On n'\xE9crase pas une mouche avec un marteau"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303760
+    m_Localized: ' C''est quoi un marteau? Et une mouche?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303761
+    m_Localized: " Va mon fils! D\xE9couvre le mondre, apprend, aime, profite du
+      don que nous t'avons offert et accompli ton destin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303762
+    m_Localized: " Bon, assez parl\xE9, je vais t'envoyer sur ta premi\xE8re mission,
+      t'es pr\xEAt?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303763
+    m_Localized: "Quelque chose semble avoir \xE9t\xE9 enterr\xE9 ici..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303764
+    m_Localized: Rien ne se passe quand j'essaye de le faire bouger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303765
+    m_Localized: Ok c'est parti!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303766
+    m_Localized: Attendez j'ai quelques questions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303767
+    m_Localized: "Quelle poule mouill\xE9!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303768
+    m_Localized: Quel est cet endroit ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303769
+    m_Localized: Qu'est que je dois faire ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303770
+    m_Localized: Ok c'est parti!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23046303771
+    m_Localized: "Bah, c'est ta maison! Nous sommes sous l'arbre monde, c'est l\xE0
+      que nous nous sommes reposez toutes ces ann\xE9es."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498048
+    m_Localized: "L'arbre monde est le premier arbre cr\xE9er par Z\xF4on et il se
+      situe au centre de la plus grosse for\xEAt sur terre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498049
+    m_Localized: Les humains sont entrain de menacer notre habitat, si ils cherchent
+      les ennuis ils vont les trouver! Occupes toi d'eux !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498050
+    m_Localized: "Passes par ce tunnel pour remonter \xE0 la surface, bonne chance
+      fils!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23050498051
+    m_Localized: Fini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342115945721856
+    m_Localized: 'Hahaha quelle chute! Bienvenue dans le vrai monde! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342360444284928
+    m_Localized: J'ai mal partout j'ai froid et on voit rien. Et t'es qui toi encore?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342382304997376
+    m_Localized: "C'est moi Enger, t'es vraiment aveugle effectivement. Je peut te
+      parler directement sans \xEAtre \xE0 c\xF4t\xE9 de toi gr\xE2ce \xE0 Sapiana.
+      C'est beau la technologie !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342400466333696
+    m_Localized: "D\xE9sol\xE9 si je ne partage pas ton engouement. Je suis plut\xF4t
+      d'humeur \xE0 tout casser l\xE0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 343978065702912
+    m_Localized: "Ca tombe bien pour te sortir de l\xE0 je pense que tu vas devoir
+      p\xE9ter le mur \xE0 droite. Il a l'air fragile."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 347785172529152
+    m_Localized: Appuie sur <sprite=0> pour fragiliser le mur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349815039504384
+    m_Localized: Fais gaffe ! Si tu tombe dans ce trou je pourrais plus venir t'aider.
+      Appuie sur <sprite=0> pour sauter.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351417926332416
+    m_Localized: Hmm ici je pense qu'avec un dash ca passe. Appuie sur <sprite=0>
+      pour dash.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353080087064576
+    m_Localized: "Tu vois cette liane l\xE0-bas? Si t'appuis sur <sprite=0> avec
+      le bon timing tu devrais pouvoir t'y accrocher. Balance toi de gauche \xE0
+      droite pour passer de l'autre c\xF4t\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 354509270986752
+    m_Localized: "T'es bient\xF4t tir\xE9 d'affaire. Ces plateformes n'ont pas l'air
+      tr\xE8s solide, \xE0 mon avis il vaut mieux que tu montes le plus rapidement
+      possible. Utilises tout ce que je t'ai appris pour sortir d'ici."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1061887842889728
+    m_Localized: "J'ai oubli\xE9 de te dire que tu peux aussi escalader certaine
+      surface, il te ...."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062299358638080
+    m_Localized: Oui, oui, je suis au courant merci ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062633229430784
+    m_Localized: "Si tu le prend comme \xE7a d\xE9merdes toi pour la suite. A plus!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1063133794447360
+    m_Localized: "Tout un monde de possibilit\xE9s infinis! Quitte \xE0 choisir je
+      pense que je vais continuer \xE0 aller vers la droite."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13341010560724992
+    m_Localized: "Hello, \xE7a gaz ? Tu te d\xE9brouilles plut\xF4t pas mal jusqu'ici.
+      Juste pour te pr\xE9venir que ce b\xE2timent est le vestige d'une ancienne
+      civilisation mais les torches sont allum\xE9s. Autant dire qu'il y a quelque
+      chose qui cloche."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13341897811210240
+    m_Localized: "Je ferais attention \xE0 ta place. Dans les films c'est souvent
+      des endroits avec des pi\xE8ges mortels dans tout les sens."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13342492861313024
+    m_Localized: "\xC7a peut pas \xEAtre pire que dans la jungle et puis, si ils
+      ont laiss\xE9 cet acc\xE8s c'est surement pour acceuillir leur sauveur! C'est-\xE0-dire
+      moi ! C'est quoi d\xE9j\xE0 un film ? "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13347757744631808
+    m_Localized: "Je ne vais pas t'expliquer \xE0 chaque fois que tu ne connais pas
+      quelque chose sinon on aura jamais fini. Calme un peu ton ego, ce peuple me
+      v\xE9n\xE9rait \xE0 l'\xE9poque et j'adore la destruction alors fait gaffe,
+      compris?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18854357901160448
+    m_Localized: Fini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18854525572657152
+    m_Localized: Fini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134803464896819200
+    m_Localized: "Comme l'avait annonc\xE9 la proph\xE9tie ! L'\xE9lu est descendu
+      sur terre pour prot\xE9ger notre village."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134803873161981952
+    m_Localized: Waouh ! Des humains ! C'est donc eux qui foutent le bazar ? Je fais
+      quoi je les tue ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134804559396253696
+    m_Localized: "Ne dis pas n'importe quoi Triple buses! Ces gens me v\xE9n\xE8rent,
+      ils ne peuvent pas \xEAtre mauvais. Sois polis un peu et discute avec eux."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134805380867469312
+    m_Localized: Heuu Bonjour... Tranquille? Ca gaze?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134806416504041472
+    m_Localized: "Ho grand protecteur, la maladie ronge notre territoire plus loin
+      \xE0 l'est. Je t'en supplie, abats la justice divine sur ce fl\xE9au et soigne
+      la terre de ce mal pernicieux."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134808185808269312
+    m_Localized: "D\xE9j\xE0 une piste, en avant ! On va r\xE9gler \xE7a en moins
+      de deux."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134808632983990272
+    m_Localized: "Ho nom d'Enger, je vous promets que tout \xE7a va \xEAtre r\xE9gl\xE9
+      tr\xE8s vite !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134809347584339968
+    m_Localized: "Merci protecteur. Le fleuve est le dernier rempart entre eux et
+      nous. Prends une de nos pirogues. Lorsque que tu arriveras \xE0 la cascade
+      justice pourra \xEAtre faite !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142352405527965696
+    m_Localized: Putain de merde !? T'es qui toi ? Qu'est ce que tu fous sur notre
+      territoire et surtout, c'est quoi ces putains de fringues ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142354000210735104
+    m_Localized: "Salutation Humain, je suis le putain d'\xE9lu et je voyage dans
+      cette putain de r\xE9gion pour livr\xE9e justice divine. Auriez-vous l'amabilit\xE9
+      de m'indiquer la position g\xE9ographique des personnes responsables de cette
+      souffrance v\xE9g\xE9tale ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142356198487404544
+    m_Localized: "Soit t'es compl\xE9tement givr\xE9 soit tu te fous de ma gueule
+      dans tous les cas t'es mort !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142357999454433280
+    m_Localized: "Cette humain n'a pas l'air commode. Mon utilisation de \"putain\"
+      \xE9tait peut \xEAtre incorrect? En tout cas il arrive vers moi je fais quoi?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142359086785802240
+    m_Localized: "Non, c'\xE9tait parfait, enfin un peu d'action ! Montre-lui de
+      quoi tu es capable !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142360560248991744
+    m_Localized: Ce que je suis capable .... ok ... donc ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142361396035366912
+    m_Localized: "S'il vous pla\xEEt, c'est un malentendu, je suis s\xFBr que l'on
+      va pouvoir trouver un arrangement !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142361413454311424
+    m_Localized: Subis mon courroux, insecte !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 142362462567182336
+    m_Localized: "Cr\xE8ve !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145624290491543552
+    m_Localized: Il y a un truc qui flotte au-dessus de son cadavre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145624713495490560
+    m_Localized: "Oui, c'est son \xE2me. Parfois, les \xE2mes des vivants refusent
+      de quitter leur enveloppe. Des sentiments tr\xE8s puissants leur permettent
+      de r\xE9sister au grand appel. Elles sont donc condamn\xE9es \xE0 errer entre
+      deux mondes. Nous les appelons les \xE2mes en perdition."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145628125335302144
+    m_Localized: "Elles sont perdues m\xEAme pour nous... Collecte-les et reviens
+      me voir, je saurais quoi en faire."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145627594948784128
+    m_Localized: "C'est super triste ton histoire, et on ne peut pas les aiders \xE0
+      retrouver leur chemin ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145628968100999168
+    m_Localized: "Encore un espion qui vient fouiner l\xE0 o\xF9 il ne devrait pas.
+      Viens ici que j'te bute encul\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164430320516116480
+    m_Localized: Salaud ! Va y !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164432998449197056
+    m_Localized: "Quoi ?! On essaye m\xEAme plus de leurs parler? "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164433190346993664
+    m_Localized: Regarde ce qu'ils font de la jungle ! Impossible de raisonner ces
+      parasites.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170602696438099968
+    m_Localized: "Chef ! Un individu suspect a \xE9t\xE9 rep\xE9r\xE9 aux abords
+      du camp."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170605130728255488
+    m_Localized: "Personne ne s'aventure impun\xE9ment sur le territoire du Don !
+      Abattez-le !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170606003554529280
+    m_Localized: "Mais chef ... \xC7a pourrait \xEAtre un explorateur qui traverse
+      l'Amazonie d'Ouest en Est."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170606702350741504
+    m_Localized: "Impossible Mike m'aurait pr\xE9venu. Ex\xE9cutez mon ordre soldat
+      ! "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170608758268538880
+    m_Localized: Chef ! Oui chef !
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

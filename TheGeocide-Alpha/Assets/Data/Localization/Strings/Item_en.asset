@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Item_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 85b3d07d7554ef440a6c6731fec2627f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 19586002944
+    m_Localized: Fireball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19602780160
+    m_Localized: Fire burns hot. You might get hurt :'(
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57918738089553920
+    m_Localized: Meteore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57918742023811072
+    m_Localized: Did you know that you have a 1 in 1,600,000 chance of being hit
+      by a meteorite?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57919801567916032
+    m_Localized: Rising dragon fist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57919832127614976
+    m_Localized: 'A very difficult move to make when you are new to street fights. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76057649164759040
+    m_Localized: Ice Breath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76057667078631424
+    m_Localized: Make your enemies smell your fresh breath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76057685504208896
+    m_Localized: Ice Cube
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76057722774794240
+    m_Localized: The perfect power for the aperitif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76057745633751040
+    m_Localized: Ice burst
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76057758564790272
+    m_Localized: Throwing icy spikes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76443476264923136
+    m_Localized: Ice kick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76443482703179776
+    m_Localized: No one likes to touch icy feet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99249349982859264
+    m_Localized: ForceLightning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99249441653567488
+    m_Localized: Giving to your anger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99250376530374656
+    m_Localized: Thunder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99250410890113024
+    m_Localized: Take shelter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114837760781234176
+    m_Localized: Flash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116963353094172672
+    m_Localized: Don't be that Blitz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116963446186749952
+    m_Localized: Blitz Bombs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117416173689810944
+    m_Localized: Samus cell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117416232808525824
+    m_Localized: It's amazing what you can do with a detonator and a huge energy
+      source
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
